@@ -63,7 +63,9 @@ This site has been built with the "mobile first" approach in mind. This results 
     explain your colors, etc.... perhaps use coolors.co? to generate an image palette
 
 ### Typography
-    explain any fonts and icon libraries used, like font-awesome and google fonts
+I used [Google Fonts](https://fonts.google.com/) to import "Roboto" as my main font, where as "sans-serif" acts as a backup font.
+
+![Roboto](docs/images/font_roboto.png)
 
 ### Wireframes
 As a first step of this project, before any code has been written, I have created Wireframes for Mobile and Desktop version. I have used Balsamiq to create them.
