@@ -130,7 +130,48 @@ main {
 }
 
 
+.control-container {
+    margin: 15px 15px 25px 15px;
+    background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1 1 45ch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
 
+/* Control menu section */
+.control-menu {
+    margin: 0px 15px 15px 15px;
+    /* background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 45ch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Control buttons */
+.btn-ctrl {
+    padding: .4rem .8rem;
+    background-color: rgba(34, 39, 37, 0.6);
+    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: #f7f7f2;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 0 1 15ch;
+}
+
+.control-menu button:hover {
+    transform: scale(0.97);
+}
 
 
 
