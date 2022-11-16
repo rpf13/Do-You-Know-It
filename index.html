@@ -14,29 +14,41 @@
 
     <!-- Main Page Section -->
     <main>
-        <!-- Centered Container w. Main Control Content -->
-        <div class="game-container">
-            <section class="title">
-                <h1>
-                    Do you know it?
-                </h1>
-            </section>
-            <!-- Control Board Container w. all Control Cards -->
-            <div class="board-container">
-                <div class="board">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>           
+        <section class="game-section">
+            <h1>Do you know it?</h1>
+            <p>
+                Now it is your turn to proof your knowledge! Are you an expert or a beginner?
+                How many questions can you handle? Do you know the real name of Axl Rose? Are you
+                a Metal or a Pop guy? But wait, you feel more comfortable with Movies? Hmmm...who was
+                the first James Bond actor? I understand, you are a genius and you know everythign about nature?
+                So lets find out...
+            </p>
+            <!-- Beegin Tours Description Section -->
+            <div class="game-container">
+                <div class="topic-select">
+                    <button class="btn-select">Music</button>
+                    <button class="btn-select">Movie</button>
+                    <button class="btn-select">Nature</button>
+                </div>
+                <div class="level-select">
+                    <button class="btn-select">Easy</button>
+                    <button class="btn-select">Medium</button>
+                    <button class="btn-select">Hard</button>
+                </div>
+                <div class="question-select">
+                    <button class="btn-select">10</button>
+                    <button class="btn-select">20</button>
+                    <button class="btn-select">30</button>
                 </div>
             </div>
+        </section>
+
+        <div class="control-container">
             <!-- Button Section to steer Workflow -->
             <div class="buttons">
-                <button id="howToPlayBtn" class="btn"></button>
-                <button id="startBtn" class="btn"></button>
-                <button id="feedbackBtn" class="btn"></button>
+                <button id="howToPlayBtn" class="btn">How to Play</button>
+                <button id="startBtn" class="btn">Start</button>
+                <button id="feedbackBtn" class="btn">Feedback</button>
             </div>
         </div>
     </main>
