@@ -63,9 +63,21 @@ This site has been built with the "mobile first" approach in mind. This results 
     explain your colors, etc.... perhaps use coolors.co? to generate an image palette
 
 ### Typography
-I used [Google Fonts](https://fonts.google.com/) to import "Roboto" as my main font, where as "sans-serif" acts as a backup font.
+I used [Google Fonts](https://fonts.google.com/) to import "Roboto" as my main font, where as "sans-serif" acts as a backup font. For headings and special titles I used the font "Permanent Marker" with a backup of cursive.
+
+<details>
+<summary>Roboto Font</summary>
 
 ![Roboto](docs/images/font_roboto.png)
+
+</details>
+
+<details>
+<summary>Permanent Marker Font</summary>
+
+![Permanent Marker](docs/images/font_permanent_marker.png)
+
+</details>
 
 ### Wireframes
 As a first step of this project, before any code has been written, I have created Wireframes for Mobile and Desktop version. I have used Balsamiq to create them.
@@ -131,6 +143,12 @@ The following arguments describe *why and how* I have choosen to code certain pa
 
 ### Mobile First Approach
     add text
+
+### Challenges during Development
+
+I faced a big challenge during the initial phase, when creating the html/css part of the main site. The initial goal was to build 9 square boxes, wich are inside a container and are evenly aligned using CSS grid. However, My ideas and the current knowledge of css grid, did not seem to be enough, because it did not work the way I have wanted.
+
+I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am happy with the result.
 
 ### Commit messages
 
