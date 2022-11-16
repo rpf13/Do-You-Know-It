@@ -93,17 +93,87 @@ As a first step of this project, before any code has been written, I have create
 ### Features Left to Implement
     have ideas on what you'd like to add in the future? add them here!! assessors LOVE seeing future concepts!
 
+---
+
 ## Technologies Used
-    explain various tech used, such as HTML, CSS, Gitpod, GitHub, Git, etc. - add a link to each respective site as well, if possible
+I used the following technologies and resources to create this site:
+
+- [HTML5](https://www.w3.org/standards/webdesign/htmlcss)
+    - HTML5 has been used to build the structure of the site
+- [CSS3](https://www.w3.org/standards/webdesign/htmlcss)
+    - CSS3 has been used for the styling of the site
+- [Balsamiq](https://balsamiq.com)
+    - Balsamiq has been used to create the Wireframes
+- [Google Fonts](https://fonts.google.com)
+    - Google Fonts has been used to choose and import the Fonts
+- [Coolors](https://coolors.co)
+    - Coolors has been used to create a color scheme
+- [Tinywow](https://tinywow.com)
+    - Tinywow has been used to compress and reformat the images
+- [Git](https://git-scm.com)
+    - Git has been used as the CLI version control tool
+- [Github](https://github.com)
+    - Github has been used to store the code and publish the site via Github Pages
+- [Gitpod](https://gitpod.io/)
+    - Gitpod has been used as the local IDE environment
+- [Am I responsive?](https://ui.dev/amiresponsive)
+    - Am I responsive has been used to show an image of the site on various devices
+- [Webaim](https://webaim.org/resources/contrastchecker/)
+    - WebAim has been used to check the contrast
+- [Wave](https://wave.webaim.org)
+    - Wave has been used to test the accessibility
+
+---
+
+## Development
+
+The following arguments describe *why and how* I have choosen to code certain parts the way they are. This section should give an explanation to my thinking process and explain the reader some conceptual decisions.
+
+### Mobile First Approach
+    add text
+
+### Commit messages
+
+- I have decided to mostly use multiline commit messages. Commit messages are an essential part of the whole project and a single line commit message is just not enough to explain. After reading [this interesting article](https://cbea.ms/git-commit/), it was clear to me, that I have to use it.
+
+- I have decided to use conventional commits, as described this [cheatsheet](https://cbea.ms/git-commit/) or as also described in the LMS of the Code Institute. I did use the following syntax guidline:
+    * **feat:** for feature which may or may not include a CSS part
+	* **fix:** for a bugfix
+	* **style:** for changes to CSS or to give style to the code itself
+	* **docs:** for changes related to documentation
+	* **refactor:** for refactored code, re-written code
+	* **maint:** for general maintenance
+
+---
 
 ## Testing
-    "For all testing, please refer to the [TESTING.md](TESTING.md) file."
+Testing is covered in a separate page, view [testing.md](TESTING.md)
 
 ## Deployment
-    document all necessary steps you did in order to deploy this project (GitHub Pages, Heroku, etc.)
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the [GitHub repository](https://github.com/rpf13/Do-You-Know-It), navigate to the Settings tab
+  - In the Code and automation section, click on pages
+  - From the branch section drop-down menu, select the Main Branch
+  - Then click save. After a few minutes you can see that the page is deployed and live, showing the related link.
+
+The live link can be found here [Do You Know It?](https://rpf13.github.io/Do-You-Know-It/)
 
 ### Local Deployment
-    document all the necessary steps someone else can take in order to make a local copy of your project, like cloning, forking, etc.
+If you want to make your own copy of this project and work on it, you can clone it locally to your IDE of choice.
+Inside the terminal of your IDE, use the following command:
+```
+git clone git@github.com:rpf13/Do-You-Know-It.git
+```
+
+If you are using your IDE inside Gitpod or generally prefer to work with Gitpod instead of a local IDE, you can open
+this project directly in Gitpod and and create your own workspace with it. To do so, klick on the following link:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rpf13/Do-You-Know-It)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extensions (Chrome, Firefox) installed. A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+---
 
 ## Credits
     explain about any particular places you took inspiration from
