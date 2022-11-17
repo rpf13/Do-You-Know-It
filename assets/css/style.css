@@ -9,20 +9,23 @@
 }
 
 /* Main Section to apply gradient color effect */
-html {
+/* html {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-}
+} */
 
 /* Main Section w. Flexbox to allign all content centered and apply overall margin */
+/* Add background gradient effect to main section*/
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    margin: 2rem auto 13rem auto;
+    /* width: 90%; */
+    margin: 0 auto;
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    /* height: 100vh; */
 }
 
 /* Game Section wrapper to define main size*/
