@@ -172,6 +172,11 @@ main {
     flex: 0 1 15ch;
 }
 
+#feedbackBtn {
+    color: #f7f7f2;
+    text-decoration: none;
+}
+
 .control-menu button:hover {
     transform: scale(0.97);
 }
@@ -231,8 +236,7 @@ main {
 }
 
 
-/* Begin Feedback Section */
-
+/* Begin Feedback Section w. nested flexbox construct*/
 .feedback-section {
     display: flex;
     /* flex-direction: column; */
@@ -241,15 +245,19 @@ main {
     /* width: 90%; */
     margin: 0 auto;
     background: linear-gradient(198deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    /* use full space of screen */
+    height: 100vh;
 }
 
+/* Feedback conainter w. text and feedback card */
 .feedback-container {
     max-width: 800px;
     padding: 2rem;
     display: flex;
-    /* flex-direction: column; */
+    /* required to center it w. vh100 on feedback-section */
+    flex-direction: column; 
+    justify-content: center;
     /* align-items: center; */
-    /* justify-content: center; */
 }
 
 .feedback-card {
@@ -278,6 +286,7 @@ main {
     font-size: 1.1rem;
 }
 
+/* Feedback form w. contact details & free text field */
 .feedback-form {
     display: flex;
     flex-direction: column;
@@ -300,8 +309,10 @@ main {
     padding: .2rem .4rem;
     border-radius: .2rem;
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    resize: none;
 }
 
+/* Feedback form submit button to confirmation page */
 .btn-form {
     padding: .4rem .8rem;
     background-color: rgba(34, 39, 37, 0.6);
