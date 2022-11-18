@@ -351,3 +351,53 @@ footer p {
     transform: scale(1.2);
     cursor: pointer;
 }
+
+/* Begin Confirmaation Section  */
+
+
+.conf-section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: linear-gradient(325deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    height: 100vh;
+}
+
+/* Confirmation conainter w. card */
+.conf-container {
+    max-width: 800px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.conf-card {
+    margin: 25px 15px 25px 15px;
+    border: solid #222725;
+    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+}
+
+.conf-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.conf-text {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+}
+
+#conf-text-bye {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
