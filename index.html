@@ -65,9 +65,27 @@
     </main>
 
     <!-- Feedback Form Section -->
-    <section>
+    <section class="feedback-section">
         <div class="feedback-container">
-
+            <div class="feedback-card">
+                <h2 class="feedback-title">Feedback Welcome!</h2>
+                <p class="feedback-text">
+                    How did you do? Are you already a quiz expert or on the way to it? In an case,
+                    thanks for playing the game and I hope you had some fun. If you want to get in
+                    contact, fill in the form below.
+                </p>
+                <form class="feedback-form" action="confirmation.html">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="first_name" class="text-input" required>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="last_name" class="text-input" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="text-input" required>
+                    <label class="feedback-form" for="feedback">Feedback</label>
+                    <textarea id="feedback" name="feedback" class="feedback" required></textarea>
+                    <button class="btn-fdbck" type="submit">Submit</button>
+                </form>
+            </div>
         </div>
 
     </section>
