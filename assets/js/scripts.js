@@ -8,11 +8,13 @@
 const howToPlayBtn = document.getElementById('howToPlayBtn');
 const howTomodal = document.getElementById('howToModal');
 const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
+const feedbackBtn = document.getElementById('feedbackBtn');
 
 // Event Listeners
 
 howToPlayBtn.addEventListener('click', displayModal);
 closeBtn.addEventListener('click', hideModal);
+feedbackBtn.addEventListener('click', goToForm);
 
 
 // Functions
@@ -44,4 +46,11 @@ window.onclick = function(event) {
     if (event.target == howTomodal) {
     howTomodal.style.display = "none";
     }
+}
+
+/**
+ * This function will move the current view to the contact form section
+ */
+function goToForm() {
+  location.href = "#form";
 }

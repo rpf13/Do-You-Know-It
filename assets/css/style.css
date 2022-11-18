@@ -172,15 +172,9 @@ main {
     flex: 0 1 15ch;
 }
 
-#feedbackBtn {
-    color: #f7f7f2;
-    text-decoration: none;
-}
-
 .control-menu button:hover {
     transform: scale(0.97);
 }
-
 
 /* HowTo Modal section */
 .modal-container {
