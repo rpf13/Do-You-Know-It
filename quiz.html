@@ -10,8 +10,32 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Do you know it?</title>
 </head>
+
+<!-- body must be flex - top layer like class feedback section -->
 <body>
-    
+
+    <!-- Begin Quiz Section -->
+    <!-- Note: correlates to class feedback-card and can be hidden by JS must be flex-->
+    <main id="quizContainer">
+        <div id="statusbar">
+
+        </div>
+        <div id="quizBody" class="quiz-content">
+            <h2 id="question" class="quiz-question"></h2>
+            <ul class="quiz-answers">
+                <!-- answers inserted via JS -->
+            </ul>
+        </div>
+
+        <!-- Note: cancel button always present, next question triggered by JS -->
+        <div class="quiz-control">
+            <button class="btn-quiz" type="button" id="abortGame">Cancel</button>
+            <button class="btn-quiz" type="button" id="nextQuestion">Next Question</button>
+        </div>
+
+    </main>
+
+
 
 
 
@@ -20,6 +44,6 @@
 
     <!-- Scripts Section-->
     <script src="assets/js/scripts.js"></script>
-    
+
 </body>
 </html>
