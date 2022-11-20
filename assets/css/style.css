@@ -354,8 +354,8 @@ footer p {
 
 /* Begin Confirmaation Section  */
 
-
-.conf-section {
+/* Overall wrapper to include gradient background effect and flexbox container */
+.conf-wrapper {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -363,17 +363,8 @@ footer p {
     height: 100vh;
 }
 
-/* Confirmation conainter w. card */
-.conf-container {
-    max-width: 800px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-}
-
+/* Confirmation card */
 .conf-card {
-    margin: 25px 15px 25px 15px;
     border: solid #222725;
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -382,6 +373,11 @@ footer p {
     flex-wrap: wrap;
     gap: 3px;
     justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 38%;
+    left: 50%;
+    width: 70%
 }
 
 .conf-title {
@@ -400,10 +396,14 @@ footer p {
 #conf-text-bye {
     padding: 1.5rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Begin Quiz Game Section */
 
+/* Overall wrapper to include gradient background effect. On purpose not applied to main
+section, since it is very likely that this site grows with further sections or divs outside
+main tag */
 .quiz-wrapper {
     background: linear-gradient(198deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     /* use full space of screen */
@@ -428,7 +428,8 @@ footer p {
     transform: translate(-50%, -50%);
     top: 38%;
     left: 50%;
-    width: 80%
+    width: 80%;
+    max-width: 900px;
 }
 
 .cancel-game {
