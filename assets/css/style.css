@@ -8,21 +8,14 @@
     font-family: "Roboto", sans-serif;
 }
 
-/* Main Section to apply gradient color effect */
-/* html {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-} */
 
-/* Main Section w. Flexbox to allign all content centered and apply overall margin */
+/* Begin index main section w. flexbox to allign all content centered and apply overall margin */
 /* Add background gradient effect to main section*/
 .index-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* width: 90%; */
     margin: 0 auto;
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     height: 100vh;
@@ -32,8 +25,6 @@
 .game-section {
     max-width: 800px;
     padding: 2rem;
-    /* text-align: center; */
-    /* padding: 1rem 0; */
 }
 
 /* Heading styling */
@@ -61,13 +52,9 @@
     width: 100%;
 }
 
-/* individual cards containing buttons */
-/* This sections needs to be refactored to reuse class selector for all 3 cards */
-.topic-select {
+/* Individual game settings cards containing buttons for settings */
+.game-settings {
     margin: 15px 15px 25px 15px;
-    /* text-align: justify; */
-    /* line-height: 1.5rem; */
-    /* background-color: #e4e6c3; */
     background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -78,48 +65,7 @@
     gap: 3px;
 }
 
-/* Hover effect for mouseover on buttons */
-.topic-select button:hover {
-    transform: scale(0.97);
-}
-
-.question-select {
-    margin: 15px 15px 25px 15px;
-    /* text-align: justify;
-    line-height: 1.5rem; */
-    background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 1.5rem;
-    flex: 1 1 45ch;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-.question-select button:hover {
-    transform: scale(0.97);
-}
-
-.level-select {
-    margin: 15px 15px 25px 15px;
-    /* text-align: justify;
-    line-height: 1.5rem; */
-    background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 1.5rem;
-    flex: 1 1 45ch;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-.level-select button:hover {
-    transform: scale(0.97);
-}
-
-/* Styling of each button */
+/* Styling of each button in game settings */
 .btn-select {
     padding: .4rem .8rem;
     background-color: rgba(34, 39, 37, 0.6);
@@ -132,24 +78,14 @@
     flex: 1 1 20ch;
 }
 
-
-.control-container {
-    margin: 15px 15px 25px 15px;
-    background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 1.5rem;
-    flex: 1 1 45ch;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
+/* Hover effect for mouseover on buttons */
+.game-settings button:hover {
+    transform: scale(0.97);
 }
 
-/* Control menu section */
+/* Game control button section */
 .control-menu {
     margin: 0px 15px 15px 15px;
-    /* background: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2); */
     border-radius: 10px;
     padding: 1rem;
     flex: 1 1 45ch;
@@ -229,14 +165,10 @@
     cursor: pointer;
 }
 
-
 /* Begin Feedback Section w. nested flexbox construct*/
 .feedback-section {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: center;
-    /* width: 90%; */
     margin: 0 auto;
     background: linear-gradient(198deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     /* use full space of screen */
@@ -251,7 +183,6 @@
     /* required to center it w. vh100 on feedback-section */
     flex-direction: column; 
     justify-content: center;
-    /* align-items: center; */
 }
 
 .feedback-card {
@@ -260,7 +191,6 @@
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 1.5rem;
-    /* flex: 1 1 45ch; */
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
@@ -322,8 +252,7 @@
     transform: scale(0.97);
 }
 
-
-/* Footer */
+/* Footer on main site */
 footer p {
     text-align: center;
     padding: 10px 0 10px 0;
@@ -352,7 +281,7 @@ footer p {
     cursor: pointer;
 }
 
-/* Begin Confirmaation Section  */
+/* Begin Confirmation Section  */
 
 /* Overall wrapper to include gradient background effect and flexbox container */
 .conf-wrapper {
@@ -406,7 +335,7 @@ section, since it is very likely that this site grows with further sections or d
 main tag */
 .quiz-wrapper {
     background: linear-gradient(198deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    /* use full space of screen */
+    /* use full space of screen for gradient background */
     height: 100vh;
 }
 
@@ -415,6 +344,7 @@ main tag */
     justify-content: center;
 }
 
+/* Quiz main card */
 .quiz-card {
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -455,6 +385,7 @@ main tag */
     text-decoration: none;
 }
 
+/* Score section inside quiz card w. flexbox to align content */
 .score-area {
     display: flex;
     justify-content: space-between;
