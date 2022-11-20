@@ -11,21 +11,23 @@
     <title>Do you know it?</title>
 </head>
 
-<!-- body must be flex - top layer like class feedback section -->
+<!-- Overall wrapper to apply gradient background -->
 <body class="quiz-wrapper">
 
     <!-- Begin Quiz Section -->
-    <!-- Note: correlates to class feedback-card and can be hidden by JS must be flex-->
     <main class="quiz-container">
         <div class="quiz-card">
+            <!-- Quiz cancel button - returns to index.html -->
             <div class="cancel-game">
                 <a href="index.html" aria-label="Cancel game and back to home"><i class="fa-regular fa-rectangle-xmark"></i> Cancel</a>
             </div>
+            <!-- Score & progress area -->
             <div class="score-area" id="scoreArea">
                 <p class="scores">Correct Answers <span id="correct">0</span></p>
                 <p class="scores">1 / 10</p>
                 <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
             </div>
+            <!-- Main quiz body with questions and answers -->
             <div id="quizBody" class="quiz-content">
                 <h2 id="question" class="quiz-question">
                     This is just a placeholder question.
@@ -39,17 +41,13 @@
                 </ul>
             </div>
 
-            <!-- Note: Next question button triggered by JS -->
+            <!-- Next question button triggered by JS -->
             <div class="quiz-control">
                 <button class="btn-quiz" type="button" id="nextQuestion">Next Question</button>
             </div>
         </div>
 
     </main>
-
-
-
-
 
 
 

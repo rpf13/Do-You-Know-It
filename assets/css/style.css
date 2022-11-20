@@ -419,27 +419,49 @@ footer p {
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3px;
     justify-content: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 28%;
+    top: 38%;
     left: 50%;
     width: 80%
 }
 
 .cancel-game {
-    text-align: center;
+    text-align: right;
+}
+
+.cancel-game i {
+    font-size: 120%;
+    color: #222725;
+    /* text-decoration: none; */
+}
+
+.cancel-game a {
+    color: #222725;
+    text-decoration: none;
 }
 
 .score-area {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0 1rem 0;
+}
+
+.quiz-question {
+    text-align: center;
+}
+
+.quiz-answers {
+    padding: 1rem 0 1rem 0;
 }
 
 .quiz-control {
     text-align: center;
+    padding: 1.5rem 0 1rem 0;
 }
