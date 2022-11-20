@@ -12,35 +12,37 @@
 </head>
 
 <!-- body must be flex - top layer like class feedback section -->
-<body>
+<body class="quiz-wrapper">
 
     <!-- Begin Quiz Section -->
     <!-- Note: correlates to class feedback-card and can be hidden by JS must be flex-->
-    <main class="quiz-container" id="quizContainer">
-        <div class="cancel-game">
-            <a href="index.html" aria-label="Cancel game and back to home"><i class="fa-regular fa-rectangle-xmark"></i></a>
-        </div>
-        <div class="scrore-area" id="scoreArea">
-            <p class="scores">Correct Answers <span id="correct">0</span></p>
-            <p class="scores">1 / 10</p>
-            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-        </div>
-        <div id="quizBody" class="quiz-content">
-            <h2 id="question" class="quiz-question">
-                This is just a placeholder question.
-            </h2>
-            <ul class="quiz-answers">
-                <!-- answers inserted via JS -->
-                <li>Answer 1</li>
-                <li>Answer 2</li>
-                <li>Answer 3</li>
-                <li>Answer 4</li>
-            </ul>
-        </div>
+    <main class="quiz-container">
+        <div class="quiz-card">
+            <div class="cancel-game">
+                <a href="index.html" aria-label="Cancel game and back to home"><i class="fa-regular fa-rectangle-xmark"></i> Cancel</a>
+            </div>
+            <div class="score-area" id="scoreArea">
+                <p class="scores">Correct Answers <span id="correct">0</span></p>
+                <p class="scores">1 / 10</p>
+                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+            </div>
+            <div id="quizBody" class="quiz-content">
+                <h2 id="question" class="quiz-question">
+                    This is just a placeholder question.
+                </h2>
+                <ul class="quiz-answers">
+                    <!-- answers inserted via JS -->
+                    <li>Answer 1</li>
+                    <li>Answer 2</li>
+                    <li>Answer 3</li>
+                    <li>Answer 4</li>
+                </ul>
+            </div>
 
-        <!-- Note: Next question button triggered by JS -->
-        <div class="quiz-control">
-            <button class="btn-quiz" type="button" id="nextQuestion">Next Question</button>
+            <!-- Note: Next question button triggered by JS -->
+            <div class="quiz-control">
+                <button class="btn-quiz" type="button" id="nextQuestion">Next Question</button>
+            </div>
         </div>
 
     </main>

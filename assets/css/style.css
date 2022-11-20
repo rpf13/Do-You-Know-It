@@ -17,7 +17,7 @@
 
 /* Main Section w. Flexbox to allign all content centered and apply overall margin */
 /* Add background gradient effect to main section*/
-main {
+.index-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,4 +400,46 @@ footer p {
 #conf-text-bye {
     padding: 1.5rem;
     font-size: 1.5rem;
+}
+
+/* Begin Quiz Game Section */
+
+.quiz-wrapper {
+    background: linear-gradient(198deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    /* use full space of screen */
+    height: 100vh;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-card {
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    box-shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 28%;
+    left: 50%;
+    width: 80%
+}
+
+.cancel-game {
+    text-align: center;
+}
+
+.score-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz-control {
+    text-align: center;
 }
