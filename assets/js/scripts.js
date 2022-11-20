@@ -9,12 +9,14 @@ const howToPlayBtn = document.getElementById('howToPlayBtn');
 const howTomodal = document.getElementById('howToModal');
 const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
 const feedbackBtn = document.getElementById('feedbackBtn');
+const startBtn = document.getElementById('startBtn');
 
 // Event Listeners
 
 howToPlayBtn.addEventListener('click', displayModal);
 closeBtn.addEventListener('click', hideModal);
 feedbackBtn.addEventListener('click', goToForm);
+startBtn.addEventListener('click', goToQuiz);
 
 
 // Functions
@@ -53,4 +55,11 @@ window.onclick = function(event) {
  */
 function goToForm() {
   location.href = "#form";
+}
+
+/**
+ * This function will move the current view to the contact form section
+ */
+ function goToQuiz() {
+  location.href = "quiz.html";
 }
