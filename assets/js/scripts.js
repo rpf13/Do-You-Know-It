@@ -6,7 +6,7 @@
 // Reference definitions to html DOM elements
 
 const howToPlayBtn = document.getElementById('howToPlayBtn');
-const howTomodal = document.getElementById('howToModal');
+const howToModal = document.getElementById('howToModal');
 const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
 const feedbackBtn = document.getElementById('feedbackBtn');
 const startBtn = document.getElementById('startBtn');
@@ -27,7 +27,7 @@ startBtn.addEventListener('click', goToQuiz);
  */
 
 function displayModal() {  
-    howTomodal.style.display = "block";
+    howToModal.style.display = "block";
 }
 
 /**
@@ -35,7 +35,7 @@ function displayModal() {
  * once the hide button is clicked
  */
 function hideModal() {
-  howTomodal.style.display = "none";
+  howToModal.style.display = "none";
 }
 
 /**
@@ -45,8 +45,8 @@ function hideModal() {
  */
 
 window.onclick = function(event) {
-    if (event.target == howTomodal) {
-    howTomodal.style.display = "none";
+    if (event.target == howToModal) {
+    howToModal.style.display = "none";
     }
 }
 
