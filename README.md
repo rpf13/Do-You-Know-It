@@ -155,6 +155,8 @@ I used the following technologies and resources to create this site:
     - WebAim has been used to check the contrast
 - [Wave](https://wave.webaim.org)
     - Wave has been used to test the accessibility
+- [MindNode](https://www.mindnode.com)
+    - MindNode has been used to create the JS MindMaps
 
 ---
 
@@ -172,6 +174,12 @@ I faced a big challenge during the initial phase, when creating the html/css par
 Since I did not have unlimited time to create this project, I have decided to stop and adjust the scope, living the agile development paradigm. I did brainstorm for alternate solutions and found a design, which I liked.
 
 I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am very happy with the result.
+
+### JavaScript
+
+In order to attack the JavaScript part, I have started with brainstorming about the functions needed in the game. I wanted to have a clear plan, or at least an estimate about the logic to be built. I have created and constantly updated a Mind Map to visually display the logic.
+
+![JS Functions MindMap](docs/wireframes/js_functions.png)
 
 ### Commit messages
 
