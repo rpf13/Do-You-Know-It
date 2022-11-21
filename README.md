@@ -59,8 +59,29 @@ This site has been built with the "mobile first" approach in mind. This results 
 
 
 
-### Colour Scheme
-    explain your colors, etc.... perhaps use coolors.co? to generate an image palette
+### Color Scheme
+Therer are two different sets of colors. One set is used to create the various gradient effects, which result in the distinct and very beautiful background effect of every site and most of the cards. I did play with the degree of mixing the colors in order to achieve the result of different effects. The base of the gradient effect are three colors, which are then mixed together.
+
+<details>
+<summary>Gradient Base Colors and Gradient Mix</summary>
+
+![Gradient Base Colors](docs/images/gradient_base_colors.png) 
+
+![Gradient Base Mix](docs/images/gradient_base_mix.png)
+
+</details>
+
+For the rest of site, I used the following colors, which are simple but build a nice and clear contrast to the gradient color palette.
+
+<details>
+<summary>Generic Colors</summary>
+
+![Generic Color Palette](docs/images/general_colors.png)
+
+</details>
+
+I have used [Coolors](https://coolors.co) to pick and compare the various colors.
+
 
 ### Typography
 I used [Google Fonts](https://fonts.google.com/) to import "Roboto" as my main font, where as "sans-serif" acts as a backup font. For headings and special titles I used the font "Permanent Marker" with a backup of cursive.
@@ -142,13 +163,15 @@ I used the following technologies and resources to create this site:
 The following arguments describe *why and how* I have choosen to code certain parts the way they are. This section should give an explanation to my thinking process and explain the reader some conceptual decisions.
 
 ### Mobile First Approach
-    add text
+The site has been built in a mobile first approach. The goal was to not have to use any media queries but build a fully responsive site. This is achieved with various dynamic settings and flexbox.
 
 ### Challenges during Development
 
-I faced a big challenge during the initial phase, when creating the html/css part of the main site. The initial goal was to build 9 square boxes, wich are inside a container and are evenly aligned using CSS grid. However, My ideas and the current knowledge of css grid, did not seem to be enough, because it did not work the way I have wanted.
+I faced a big challenge during the initial phase, when creating the html/css part of the main site. The initial goal was to build 9 square boxes, wich are inside a container and are evenly aligned using CSS grid. However, My ideas and my current knowledge of css grid, did not seem to be enough, because it did not work the way I wanted.
 
-I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am happy with the result.
+Since I did not have unlimited time to create this project, I have decided to stop and adjust the scope, living the agile development paradigm. I did brainstorm for alternate solutions and found a design, which I liked.
+
+I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am very happy with the result.
 
 ### Commit messages
 
