@@ -31,7 +31,7 @@
                 <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
             </div>
             <!-- Main quiz body with questions and answers -->
-            <div class="question-container hide">
+            <div id="quest-cont" class="hide">
                 <div id="quiz-question" class="quiz-question">Question</div>
                 
                 <div id="quiz-answers" class="quiz-answers">
@@ -44,8 +44,8 @@
 
             <!-- Next question button triggered by JS -->
             <div class="quiz-control">
-                <button id="start-btn" class="btn-quiz btn" type="button">Start</button>
-                <button id="next-btn" class="btn-quiz btn hide" type="button">Next Question</button>
+                <button id="start-btn" class="btn-quiz" type="button">Start Game</button>
+                <button id="next-btn" class="btn-quiz hide" type="button">Next Question</button>
             </div>
         </div>
 
@@ -62,6 +62,7 @@
 
     <!-- Scripts Section-->
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/questions.js"></script>
     <script src="assets/js/quiz.js"></script>
     <script src="https://kit.fontawesome.com/c53ba6f7a1.js" crossorigin="anonymous"></script>
 

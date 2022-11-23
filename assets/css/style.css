@@ -446,12 +446,12 @@ main tag */
     cursor: pointer;
 }
 
-.btn-quiz-correct {
+.btn-quiz.correct {
     background-color: var(--correct-answer);
     color: var(--smk-black);
 }
 
-.btn-quiz-wrong {
+.btn-quiz.wrong {
     background-color: var(--wrong-answer);
 }
 
