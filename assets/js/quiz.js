@@ -1,23 +1,23 @@
 // Reference definitions to html DOM elements
 
-const startButton = document.getElementById('start-btn')
-const questContElement = document.getElementById('quest-cont')
-const nextButton = document.getElementById('next-btn')
-const questElement = document.getElementById('quiz-question')
-const answButtonsElement = document.getElementById('quiz-answers')
+const startButton = document.getElementById('start-btn');
+const questContElement = document.getElementById('quest-cont');
+const nextButton = document.getElementById('next-btn');
+const questElement = document.getElementById('quiz-question');
+const answButtonsElement = document.getElementById('quiz-answers');
 
 // define Variables, which are going to be changed in the function
 
-let randQuestions, currQuestIndex
+let randQuestions, currQuestIndex;
 
 // Event listeners section
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currQuestIndex++
+    currQuestIndex++;
     // update here also the question count
-    getNextQuestion()
-})
+    getNextQuestion();
+});
 
 
 // Functions section
@@ -32,12 +32,11 @@ nextButton.addEventListener('click', () => {
  * 
  */
 function startGame() {
-    startButton.classList.add('hide')
-    randQuestions = questions.sort(() => Math.random() - .5)
-    currQuestIndex = 0
-    questContElement.classList.remove('hide')
-    getNextQuestion()
-
+    startButton.classList.add('hide');
+    randQuestions = questions.sort(() => Math.random() - .5);
+    currQuestIndex = 0;
+    questContElement.classList.remove('hide');
+    getNextQuestion();
 }
 
 /**
@@ -47,10 +46,10 @@ function startGame() {
  */
 
 function getNextQuestion() {
-    clearQuizContent()
-    displQuest(randQuestions[currQuestIndex])
+    clearQuizContent();
+    displQuest(randQuestions[currQuestIndex]);
     // remove consol statement
-    console.log(currQuestIndex)
+    console.log(currQuestIndex);
 }
 
 /**
@@ -67,16 +66,16 @@ function getNextQuestion() {
  */
 
 function displQuest(randQuestOfArray) {
-    questElement.innerText = randQuestOfArray.question
+    questElement.innerText = randQuestOfArray.question;
     randQuestOfArray.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn-quiz')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn-quiz');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', chooseAnswer)
-        answButtonsElement.appendChild(button)
+        button.addEventListener('click', chooseAnswer);
+        answButtonsElement.appendChild(button);
     });
 }
 
@@ -89,9 +88,9 @@ function displQuest(randQuestOfArray) {
  */
 
 function clearQuizContent() {
-    nextButton.classList.add('hide')
+    nextButton.classList.add('hide');
     while (answButtonsElement.firstChild) {
-        answButtonsElement.removeChild(answButtonsElement.firstChild)
+        answButtonsElement.removeChild(answButtonsElement.firstChild);
     }
 }
 
@@ -106,17 +105,17 @@ function clearQuizContent() {
  */
 
 function chooseAnswer(klickEvent) {
-    const klickedButton = klickEvent.target
-    const correct = klickedButton.dataset.correct
+    const klickedButton = klickEvent.target;
+    const correct = klickedButton.dataset.correct;
     Array.from(answButtonsElement.children).forEach(button => {
-        setState(button, button.dataset.correct)
-    })
+        setState(button, button.dataset.correct);
+    });
     if (randQuestions.length > currQuestIndex + 1) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
         // remove or update this function to if we are at the end of q's we end game and message
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
     }
 }
 
@@ -132,12 +131,11 @@ function chooseAnswer(klickEvent) {
  */
 
 function setState(element, correct) {
-    clearState(element)
+    clearState(element);
     if (correct) {
-        element.classList.add('correct')
-    }
-    else {
-        element.classList.add('wrong')
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
     }
 }
 
@@ -147,6 +145,6 @@ function setState(element, correct) {
  */
 
 function clearState(clearElement) {
-    clearElement.classList.remove('correct')
-    clearElement.classList.remove('wrong')
+    clearElement.classList.remove('correct');
+    clearElement.classList.remove('wrong');
 }
