@@ -20,6 +20,8 @@
     --white: #f7f7f2;
     --smk-black: #222725;
     --transform-std: scale(0.97);
+    --wrong-answer: rgba(239, 35, 60, 0.5);
+    --correct-answer: rgba(56, 176, 0, 0.7);
 
 }
 
@@ -416,12 +418,16 @@ main tag */
     padding: 1rem 0 1rem 0;
 }
 
+/* Question and answer section inside quiz card */
 .quiz-question {
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .quiz-answers {
     padding: 1rem 0 1rem 0;
+    display: grid;
+    gap: 5px;
 }
 
 .quiz-control {
@@ -440,9 +446,30 @@ main tag */
     cursor: pointer;
 }
 
+.btn-quiz-correct {
+    background-color: var(--correct-answer);
+    color: var(--smk-black);
+}
+
+.btn-quiz-wrong {
+    background-color: var(--wrong-answer);
+}
+
+.quiz-answers button:hover {
+    transform: var(--transform-std);
+}
+
 .quiz-control button:hover {
     transform: var(--transform-std);
 }
+
+
+
+/* Generic hide class to hide certain elements */
+
+.hide {
+    display: none;
+  }
 
 /* Github top right corner link Credits to sweetalert2.github.io - slightly modified */
 

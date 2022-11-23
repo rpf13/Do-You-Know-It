@@ -31,22 +31,21 @@
                 <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
             </div>
             <!-- Main quiz body with questions and answers -->
-            <div id="quizBody" class="quiz-content">
-                <h2 id="question" class="quiz-question">
-                    This is just a placeholder question.
-                </h2>
-                <ul class="quiz-answers">
-                    <!-- answers inserted via JS -->
-                    <li>Answer 1</li>
-                    <li>Answer 2</li>
-                    <li>Answer 3</li>
-                    <li>Answer 4</li>
-                </ul>
+            <div class="question-container hide">
+                <div id="quiz-question" class="quiz-question">Question</div>
+                
+                <div id="quiz-answers" class="quiz-answers">
+                    <button class="btn-quiz">Answer 1</button>
+                    <button class="btn-quiz">Answer 2</button>
+                    <button class="btn-quiz">Answer 3</button>
+                    <button class="btn-quiz">Answer 4</button>
+                </div>
             </div>
 
             <!-- Next question button triggered by JS -->
             <div class="quiz-control">
-                <button class="btn-quiz" type="button" id="nextQuestion">Next Question</button>
+                <button id="start-btn" class="btn-quiz btn" type="button">Start</button>
+                <button id="next-btn" class="btn-quiz btn hide" type="button">Next Question</button>
             </div>
         </div>
 
@@ -63,6 +62,7 @@
 
     <!-- Scripts Section-->
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <script src="https://kit.fontawesome.com/c53ba6f7a1.js" crossorigin="anonymous"></script>
 
 </body>
