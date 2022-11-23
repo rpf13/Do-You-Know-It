@@ -33,8 +33,18 @@ function getNextQuestion() {
 
 function displQuest(randQuestOfArray) {
     questElement.innerText = randQuestOfArray.question
+    randQuestOfArray.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn-quiz')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', chooseAnswer)
+        answButtonsElement.appendChild(button)
+    });
 }
 
-function chooseAnswer() {
+function chooseAnswer(klickEvent) {
 
 }
