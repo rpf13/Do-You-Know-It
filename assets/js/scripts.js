@@ -1,7 +1,3 @@
-"use strict";
-
-/*jshint strict: global */
-/*jshint esversion: 8 */
 
 // Reference definitions to html DOM elements
 
