@@ -2,6 +2,7 @@
 
 const startButton = document.getElementById('start-btn')
 const questContElement = document.getElementById('quest-cont')
+const nextButton = document.getElementById('next-btn')
 const questElement = document.getElementById('quiz-question')
 const answButtonsElement = document.getElementById('quiz-answers')
 
@@ -26,6 +27,7 @@ function startGame() {
 }
 
 function getNextQuestion() {
+    clearQuizContent()
     displQuest(randQuestions[currQuestIndex])
     // need to remove this console
     console.log(currQuestIndex)
@@ -43,6 +45,13 @@ function displQuest(randQuestOfArray) {
         button.addEventListener('click', chooseAnswer)
         answButtonsElement.appendChild(button)
     });
+}
+
+function clearQuizContent() {
+    nextButton.classList.add('hide')
+    while (answButtonsElement.firstChild) {
+        answButtonsElement.removeChild(answButtonsElement.firstChild)
+    }
 }
 
 function chooseAnswer(klickEvent) {
