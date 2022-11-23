@@ -13,6 +13,10 @@ let randQuestions, currQuestIndex
 // Event listeners section
 
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currQuestIndex++
+    getNextQuestion()
+})
 
 
 // Functions section
