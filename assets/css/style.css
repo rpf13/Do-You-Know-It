@@ -32,7 +32,8 @@
     justify-content: center;
     margin: 0 auto;
     background: var(--gradient-lr);
-    height: 100vh;
+    /* remove setting below and work with a hide class */
+    /* height: 100vh; */
 }
 
 /* Game Section wrapper to define main size*/
@@ -122,7 +123,7 @@
     flex: 0 1 15ch;
 }
 
-.control-menu button:hover {
+.control-menu [class^='btn-']:hover {
     transform: var(--transform-std);
 }
 
@@ -185,8 +186,8 @@
     justify-content: center;
     margin: 0 auto;
     background: var(--gradient-lr-btm-left);
-    /* use full space of screen */
-    height: 100vh;
+    /* remove line below since it causes responsiveness issues*/
+    /* height: 100vh; */
 }
 
 /* Feedback conainter w. text and feedback card */
@@ -303,6 +304,7 @@ footer p {
     justify-content: center;
     margin: 0 auto;
     background: var(--gradient-lr);
+    /* check out this setting, better apply the background to the html */
     height: 100vh;
 }
 
@@ -350,6 +352,7 @@ main tag */
 .quiz-wrapper {
     background: var(--gradient-lr-btm-left);
     /* use full space of screen for gradient background */
+    /* remove this setting and better apply it to the html background */
     height: 100vh;
 }
 
