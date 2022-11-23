@@ -55,5 +55,25 @@ function clearQuizContent() {
 }
 
 function chooseAnswer(klickEvent) {
+    const klickedButton = klickEvent.target
+    const correct = klickedButton.dataset.correct
+    Array.from(answButtonsElement.children).forEach(button => {
+        setState(button, button.dataset.correct)
+    })
+    nextButton.classList.remove('hide')
+}
 
+function setState(element, correct) {
+    clearState(element)
+    if (correct) {
+        element.classList.add('correct')
+    }
+    else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearState(clearElement) {
+    clearElement.classList.remove('correct')
+    clearElement.classList.remove('wrong')
 }
