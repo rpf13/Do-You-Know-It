@@ -177,7 +177,7 @@ I quickly came up with another solution, using Flexbox, which I have already stu
 
 ### JavaScript
 
-In order to attack the JavaScript part, I have started with brainstorming about the functions needed in the game. I wanted to have a clear plan, or at least an estimate about the logic to be built. I have created and constantly updated a Mind Map to visually display the logic.
+In order to attack the JavaScript part, I have started with brainstorming about the functions needed in the game. I wanted to have a clear plan, or at least an estimate about the logic to be built. I have created and constantly updated a Mind Map to visually display the logic. It also shows the connection between the functions, which is calling which. Furthermore, some key elements / task in each function are added to explain the purpose better.
 
 ![JS Functions MindMap](docs/wireframes/js_functions.png)
 
