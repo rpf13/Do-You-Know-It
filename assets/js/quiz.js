@@ -9,6 +9,9 @@ const answButtonsElement = document.getElementById('quiz-answers');
 // define Variables, which are going to be changed in the function
 
 let randQuestions, currQuestIndex;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
 
 // Event listeners section
 
@@ -33,6 +36,7 @@ nextButton.addEventListener('click', () => {
  */
 function startGame() {
     startButton.classList.add('hide');
+    clearCounterState();
     randQuestions = questions.sort(() => Math.random() - .5);
     currQuestIndex = 0;
     questContElement.classList.remove('hide');
@@ -58,7 +62,7 @@ function getNextQuestion() {
  * display k,v question.
  * It will loop over the anser k, v pair and create a button element
  * for each of them and set the text. If the value of the answer is correct,
- * the dataset of that button will be set to correct. An even listener
+ * the dataset of that button will be set to correct. An event listener
  * will call the chooseAnswer function and handover the event of "clicking" the button.
  * The answerButtonElement will receive the answers as child and show them.
  * 
@@ -101,6 +105,8 @@ function clearQuizContent() {
  * If the dataset of the button has the correct value, the const correct will be filled.
  * A loop over the other, non clicked elements, which we got via answButtonElement, evaluates
  * their dataset if correct or wrong and sets the status.
+ * The correct / wrong counter will be set accordingly. The DOM gets parsed for the old value
+ * and increases it by 1.
  * @param {*} klickEvent which is defined w. event listener in displQuest function
  */
 
@@ -116,6 +122,13 @@ function chooseAnswer(klickEvent) {
         // remove or update this function to if we are at the end of q's we end game and message
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
+    }
+    if (correct) {
+        let oldCorrect = parseInt(document.getElementById("correct").innerText);
+        document.getElementById("correct").innerText = ++oldCorrect;
+    } else {
+        let oldIncorrect = parseInt(document.getElementById("incorrect").innerText);
+        document.getElementById("incorrect").innerText = ++oldIncorrect;
     }
 }
 
@@ -147,4 +160,9 @@ function setState(element, correct) {
 function clearState(clearElement) {
     clearElement.classList.remove('correct');
     clearElement.classList.remove('wrong');
+}
+
+function clearCounterState() {
+    document.getElementById("correct").innerText = 0;
+    document.getElementById("incorrect").innerText = 0;
 }
