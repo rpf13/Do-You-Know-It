@@ -11,6 +11,7 @@ const answButtonsElement = document.getElementById('quiz-answers');
 let randQuestions, currQuestIndex;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
+let counter = document.getElementById("counter");
 
 
 // Event listeners section
@@ -31,9 +32,10 @@ nextButton.addEventListener('click', () => {
  * randomly selected question. We use negative or positive numbers as the sort
  * algorithm (positive one way, negative the other way). To get this neg or pos
  * number, we use Math.rand which gives a rand number betw. 1 and 0. To become
- * negative, we subtract 0.5. 
- * 
+ * negative, we subtract 0.5. The clearCounterState function is called to reset
+ * related counters. 
  */
+
 function startGame() {
     startButton.classList.add('hide');
     clearCounterState();
@@ -47,6 +49,7 @@ function startGame() {
  * This function will call the clearQuizContent function, to clear the quiz
  * section. It will also call the displQuestion function and handover the
  * randQuestion w. the current Question Index, as argument.
+ * It will set the question counter
  */
 
 function getNextQuestion() {
@@ -54,6 +57,7 @@ function getNextQuestion() {
     displQuest(randQuestions[currQuestIndex]);
     // remove consol statement
     console.log(currQuestIndex);
+    counter.innerText = `${currQuestIndex + 1} / ${questions.length}`;
 }
 
 /**
@@ -161,6 +165,11 @@ function clearState(clearElement) {
     clearElement.classList.remove('correct');
     clearElement.classList.remove('wrong');
 }
+
+/**
+ * This function will clear the state of correct / incorrect question counter
+ * and therefore set the value of the text displayed back to 0.
+ */
 
 function clearCounterState() {
     document.getElementById("correct").innerText = 0;
