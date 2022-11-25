@@ -12,7 +12,8 @@
 
 :root {
     --gradient-lr: linear-gradient(325deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    --gradient-rl: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    /* --gradient-rl: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
+    --gradient-rl: linear-gradient(50deg, #fc7900 60%,#fcc700 100%);
     --gradient-lr-btm-left: linear-gradient(198deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
     --font-marker: 'Permanent Marker', cursive;
     --shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -27,88 +28,71 @@
 
 /* Begin index.html main section w. flexbox to allign all content centered and apply overall margin */
 /* Add background gradient effect to main section*/
-.index-wrapper {
-    display: flex;
+.body-class {
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto; */
     background: var(--gradient-lr);
     /* remove setting below and work with a hide class */
-    /* height: 100vh; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
-/* Game Section wrapper to define main size*/
-.game-section {
-    max-width: 800px;
+/* Overall wrapper valid for all containers - shared */
+.overall-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Game container - valid for whole game content - shared */
+.game-container {
+    max-width: 80%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
 }
 
-/* Heading styling */
-.game-section h1 {
-    text-align: center;
-    padding: 1rem 0;
+.game-card {
+    background: var(--gradient-rl);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    /* width: 80%;
+    max-width: 100%; */
+}
+
+.game-title {
     font-family: var(--font-marker);
-    text-transform: uppercase;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
+    text-align: center;
 }
 
-/* Motivational text styling */
-.game-section p {
+.game-text {
     text-align: justify;
     padding: 1.5rem;
     font-size: 1.1rem;
 }
 
-/* Game container to include selection buttons */
-.game-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Individual game settings cards containing buttons for settings */
-.game-settings {
-    margin: 15px 15px 25px 15px;
-    background: var(--gradient-rl);
-    box-shadow: var(--shadow);
-    border-radius: 10px;
-    padding: 1.5rem;
-    flex: 1 1 45ch;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-/* Styling of each button in game settings */
-.btn-select {
-    padding: .4rem .8rem;
-    background-color: var(--btn-backgrnd);
-    box-shadow: var(--shadow);
-    color: var(--white);
-    border-radius: .5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    flex: 1 1 20ch;
-}
-
-/* Hover effect for mouseover on buttons */
-.game-settings button:hover {
-    transform: var(--transform-std);
-}
 
 /* Game control button section */
 .control-menu {
     margin: 0px 15px 15px 15px;
     border-radius: 10px;
     padding: 1rem;
-    flex: 1 1 45ch;
+    text-align: center;
+    /* flex: 1 1 45ch;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     gap: 5px;
 }
 
@@ -182,25 +166,7 @@
     cursor: pointer;
 }
 
-/* Begin Feedback Section w. nested flexbox construct*/
-.feedback-section {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    background: var(--gradient-lr-btm-left);
-    /* remove line below since it causes responsiveness issues*/
-    /* height: 100vh; */
-}
-
-/* Feedback conainter w. text and feedback card */
-.feedback-container {
-    max-width: 800px;
-    padding: 2rem;
-    display: flex;
-    /* required to center it w. vh100 on feedback-section */
-    flex-direction: column; 
-    justify-content: center;
-}
+/* Begin Feedback Section w. Feedback Card and Form*/
 
 .feedback-card {
     margin: 50px 15px 25px 15px;
@@ -269,45 +235,29 @@
     transform: var(--transform-std);
 }
 
-/* Footer on main site */
-footer p {
-    text-align: center;
-    padding: 10px 0 10px 0;
-    font-size: .9rem;
-}
-
-.social-networks {
-    text-align: center;
-    background-color: var(--smk-black);
-}
-
-.social-networks > li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 150%;
-    margin: 1rem;
-    padding: 1rem;
-    color: var(--white);
-}
-
-/* Hover effect to social media icons */
-.social-networks i:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
 /* Begin Confirmation Section  */
 
-/* Overall wrapper to include gradient background effect and flexbox container */
+/* Top body class to define background and parent flex */
+.body-conf-class {
+    background: var(--gradient-lr);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Overall wrapper to add flexbox for centering */
 .conf-wrapper {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    background: var(--gradient-lr);
-    /* check out this setting, better apply the background to the html */
-    height: 100vh;
+}
+
+/* Actual  */
+.conf-container {
+    display: flex;
+    max-width: 80%;
+    padding: 2rem;
+    flex-direction: column; 
+    justify-content: center;
 }
 
 /* Confirmation card */
@@ -316,15 +266,12 @@ footer p {
     box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 1.5rem;
-    display: flex;
     flex-wrap: wrap;
     gap: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     justify-content: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 38%;
-    left: 50%;
-    width: 70%
 }
 
 .conf-title {
@@ -463,8 +410,6 @@ main tag */
     transform: var(--transform-std);
 }
 
-
-
 /* Generic hide class to hide certain elements */
 .hide {
     display: none;
@@ -480,4 +425,38 @@ main tag */
     position: fixed;
     top: 0;
     right: 0;
+}
+
+
+
+/* DELETE FOOTER IF NOT NEEDED */
+
+
+/* Begin Footer section*/
+footer p {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: .9rem;
+}
+
+.social-networks {
+    text-align: center;
+    background-color: var(--smk-black);
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 150%;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--white);
+}
+
+/* Hover effect to social media icons */
+.social-networks i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }

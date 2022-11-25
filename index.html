@@ -10,73 +10,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Do you know it?</title>
 </head>
-<body>
+<body class="body-class">
 
-    <!-- Main Page Section -->
-    <main class="index-wrapper">
-        <section class="game-section">
-            <h1>Do you know it?</h1>
-            <p>
-                Now it is your turn to proof your knowledge! Are you an expert or a beginner?
-                How many questions can you handle? Do you know the real name of Axl Rose? Are you
-                a Metal or a Pop guy? But wait, you feel more comfortable with Movies? Hmmm...who was
-                the first James Bond actor? I understand, you are a genius and you know everything about nature?
-                So lets find out...
-            </p>
-            <!-- Begin Game Container Section -->
-            <div class="game-container">
-                <!-- Begin Game Settings Section -->
-                <div class="game-settings">
-                    <button class="btn-select">Music</button>
-                    <button class="btn-select">Movie</button>
-                    <button class="btn-select">Nature</button>
-                </div>
-                <div class="game-settings">
-                    <button class="btn-select">Easy</button>
-                    <button class="btn-select">Medium</button>
-                    <button class="btn-select">Hard</button>
-                </div>
-                <div class="game-settings">
-                    <button class="btn-select">10</button>
-                    <button class="btn-select">20</button>
-                    <button class="btn-select">30</button>
-                </div>
+
+     <!-- Begin overall wrapper to contain most of the sections -->
+     <div class="overall-wrapper">
+        <!-- container can maybe be general for everyone - check!!!! -->
+        <div class="game-container">
+            <!-- Begin Main Game Section Card -->
+            <section class="game-card">
+                <h1 class="game-title">Do you know it?</h1>
+                <p class="game-text">
+                    Now it is your turn to proof your knowledge! Are you an expert or a beginner?
+                    How many questions can you handle? Do you know the real name of Axl Rose? Are you
+                    a Metal or a Pop guy? But wait, you feel more comfortable with Movies? Hmmm...who was
+                    the first James Bond actor? I understand, you are a genius and you know everything about nature?
+                    So lets find out...
+                </p>
                 <!-- Begin Game Control Button Section -->
                 <div class="control-menu">
                     <button class="btn-ctrl" id="howToPlayBtn">How to Play</button>
                     <button class="btn-ctrl" id="startBtn">Start</button>
                     <button class="btn-ctrl" id="feedbackBtn">Feedback</button>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Begin Modal HowTo Box -->
-        <div id="howToModal" class="modal-container">
-            <div class="modal-content">
-                <h1 class="modal-title">How To Play</h1>
-                <ul class="modal-list">
-                    <li><i class="fa-solid fa-arrow-right"></i> Start the game!</li>
-                    <li><i class="fa-solid fa-arrow-right"></i> Select an answer!</li>
-                    <li><i class="fa-solid fa-arrow-right"></i> You can select only one answer!</li>
-                    <li><i class="fa-solid fa-arrow-right"></i> You cannot re-select your answer!</li>
-                    <li><i class="fa-solid fa-arrow-right"></i> Proof your knowledge!</li>
-                    <li><i class="fa-solid fa-arrow-right"></i> Klick the quit button to give up...</li>
-                </ul>
-                <p class="modal-close-btn" aria-label="close button"><i class="fa-solid fa-square-xmark"></i></p>
-            </div>
-        </div>        
-    </main>
+            </section>
 
-    <!-- Feedback Form Section -->
-    <section class="feedback-section hide">
-        <div class="feedback-container">
-            <div class="feedback-card" id="form">
+            <!-- Begin Feedback Section Card -->
+            <section class="feedback-card hide" id="form">
                 <h2 class="feedback-title">Feedback Welcome!</h2>
                 <p class="feedback-text">
-                    How did you do? Are you already a quiz expert or on the way to it? In an case,
+                    How did you do? Are you already a quiz expert or on the way to it? In any case,
                     thanks for playing the game and I hope you had some fun. If you want to get in
                     contact, fill in the form below.
                 </p>
+                <!-- Begin Form Section for actual Feedback to be sent -->
                 <form class="feedback-form" action="confirmation.html">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="first_name" class="text-input" required>
@@ -88,13 +55,30 @@
                     <textarea id="feedback" name="feedback" class="feedback-input" rows="6" required></textarea>
                     <button class="btn-form" type="submit">Submit</button>
                 </form>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
+
+     <!-- Begin Modal HowTo Box -->
+     <div id="howToModal" class="modal-container">
+         <div class="modal-content">
+             <h1 class="modal-title">How To Play</h1>
+             <ul class="modal-list">
+                 <li><i class="fa-solid fa-arrow-right"></i> Start the game!</li>
+                 <li><i class="fa-solid fa-arrow-right"></i> Select an answer!</li>
+                 <li><i class="fa-solid fa-arrow-right"></i> You can select only one answer!</li>
+                 <li><i class="fa-solid fa-arrow-right"></i> You cannot re-select your answer!</li>
+                 <li><i class="fa-solid fa-arrow-right"></i> Proof your knowledge!</li>
+                 <li><i class="fa-solid fa-arrow-right"></i> Klick the quit button to give up...</li>
+             </ul>
+             <p class="modal-close-btn" aria-label="close button"><i class="fa-solid fa-square-xmark"></i></p>
+         </div>
+     </div>        
+
 
     <!-- Footer Section -->
     <footer>
-        <ul class="social-networks">
+        <ul class="social-networks hide">
             <li>
                 <a href="https://www.pinterest.com/" target="_blank" rel="noopener" 
                 aria-label="Visit Pinterest page (opens in a new tab)"><i class="fa-brands fa-square-pinterest"></i></a>
