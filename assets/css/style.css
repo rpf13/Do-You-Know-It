@@ -466,13 +466,16 @@ main tag */
 
 
 /* Generic hide class to hide certain elements */
-
 .hide {
     display: none;
   }
 
-/* Github top right corner link Credits to sweetalert2.github.io - slightly modified */
+/* Inactivae button click events */
+.disable-buttons {
+    pointer-events: none;
+}
 
+/* Github top right corner link Credits to sweetalert2.github.io - slightly modified */
 .github-corner {
     position: fixed;
     top: 0;

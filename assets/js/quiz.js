@@ -49,11 +49,13 @@ function startGame() {
  * This function will call the clearQuizContent function, to clear the quiz
  * section. It will also call the displQuestion function and handover the
  * randQuestion w. the current Question Index, as argument.
- * It will set the question counter
+ * It will set the question counter and it will enable the click option
+ * again on the answer buttons.
  */
 
 function getNextQuestion() {
     clearQuizContent();
+    answButtonsElement.classList.remove('disable-buttons');
     displQuest(randQuestions[currQuestIndex]);
     // remove consol statement
     console.log(currQuestIndex);
@@ -110,13 +112,15 @@ function clearQuizContent() {
  * A loop over the other, non clicked elements, which we got via answButtonElement, evaluates
  * their dataset if correct or wrong and sets the status.
  * The correct / wrong counter will be set accordingly. The DOM gets parsed for the old value
- * and increases it by 1.
+ * and increases it by 1. The answer button click functionality will be removed as soon as one
+ * answer got picked.
  * @param {*} klickEvent which is defined w. event listener in displQuest function
  */
 
 function chooseAnswer(klickEvent) {
     const klickedButton = klickEvent.target;
     const correct = klickedButton.dataset.correct;
+    answButtonsElement.classList.add('disable-buttons');
     Array.from(answButtonsElement.children).forEach(button => {
         setState(button, button.dataset.correct);
     });
