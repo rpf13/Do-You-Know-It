@@ -9,6 +9,13 @@ const gameCard = document.getElementById('game');
 const quizCard = document.getElementById('quiz');
 const restartButton = document.getElementById('restart-btn');
 const endButton = document.getElementById('end-btn');
+const howToPlayBtn = document.getElementById('howToPlayBtn');
+const howToModal = document.getElementById('howToModal');
+const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
+const feedbackBtn = document.getElementById('feedbackBtn');
+
+
+
 
 
 // define Variables, which are going to be changed in the function
@@ -29,6 +36,9 @@ nextButton.addEventListener('click', () => {
     getNextQuestion();
 });
 endButton.addEventListener('click', goHome);
+howToPlayBtn.addEventListener('click', displayModal);
+closeBtn.addEventListener('click', hideModal);
+feedbackBtn.addEventListener('click', goToForm);
 
 
 // Functions section
@@ -195,4 +205,38 @@ function clearCounterState() {
  */
  function goHome() {
     location.href = "index.html";
+  }
+
+  /**
+ * This function will hide the modal once any area outside the modal
+ * is clicked
+ */
+
+window.onclick = function(event) {
+    if (event.target == howToModal) {
+    howToModal.style.display = "none";
+    }
+}
+
+/**
+ * This function will diplay the modal window once the How to Play button is clicked
+ */
+
+ function displayModal() {  
+    howToModal.style.display = "block";
+}
+
+/**
+ * This function will hide the modal once the close button inside modal is clicked
+ */
+
+ function hideModal() {
+    howToModal.style.display = "none";
+  }
+
+/**
+ * This function will hide the game card and display the contact form card
+ */
+function goToForm() {
+    location.href = "#form";
   }
