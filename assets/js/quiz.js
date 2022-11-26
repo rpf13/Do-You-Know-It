@@ -5,6 +5,10 @@ const questContElement = document.getElementById('quest-cont');
 const nextButton = document.getElementById('next-btn');
 const questElement = document.getElementById('quiz-question');
 const answButtonsElement = document.getElementById('quiz-answers');
+const gameCard = document.getElementById('game');
+const quizCard = document.getElementById('quiz');
+const restartButton = document.getElementById('restart-btn');
+
 
 // define Variables, which are going to be changed in the function
 
@@ -17,6 +21,7 @@ let counter = document.getElementById("counter");
 // Event listeners section
 
 startButton.addEventListener('click', startGame);
+restartButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currQuestIndex++;
     // update here also the question count
@@ -37,7 +42,11 @@ nextButton.addEventListener('click', () => {
  */
 
 function startGame() {
-    startButton.classList.add('hide');
+    // start button moved to game card, no need to hide sicne game card gets hidden
+    // startButton.classList.add('hide');
+    gameCard.classList.add('hide')
+    restartButton.classList.add('hide');
+    quizCard.classList.remove('hide')
     clearCounterState();
     randQuestions = questions.sort(() => Math.random() - .5);
     currQuestIndex = 0;
@@ -128,8 +137,8 @@ function chooseAnswer(klickEvent) {
         nextButton.classList.remove('hide');
     } else {
         // remove or update this function to if we are at the end of q's we end game and message
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
+        // startButton.innerText = 'Restart';
+        restartButton.classList.remove('hide');
     }
     if (correct) {
         let oldCorrect = parseInt(document.getElementById("correct").innerText);

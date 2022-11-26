@@ -45,15 +45,17 @@
 .overall-wrapper {
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 /* Game container - valid for whole game content - shared */
 .game-container {
-    max-width: 80%;
+    /* max-width: 80%; */
     padding: 2rem;
     display: flex;
     flex-direction: column; 
     justify-content: center;
+    width: 100%;
 }
 
 .game-card {
@@ -320,12 +322,13 @@ main tag */
     flex-direction: column;
     gap: 3px;
     justify-content: center;
-    position: absolute;
+
+    /* position: absolute;
     transform: translate(-50%, -50%);
     top: 38%;
     left: 50%;
     width: 80%;
-    max-width: 900px;
+    max-width: 900px; */
 }
 
 .quiz-heading h1  {

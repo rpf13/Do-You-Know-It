@@ -18,7 +18,7 @@
         <!-- container can maybe be general for everyone - check!!!! -->
         <div class="game-container">
             <!-- Begin Main Game Section Card -->
-            <section class="game-card">
+            <section class="game-card" id="game">
                 <h1 class="game-title">Do you know it?</h1>
                 <p class="game-text">
                     Now it is your turn to proof your knowledge! Are you an expert or a beginner?
@@ -30,8 +30,46 @@
                 <!-- Begin Game Control Button Section -->
                 <div class="control-menu">
                     <button class="btn-ctrl" id="howToPlayBtn">How to Play</button>
-                    <button class="btn-ctrl" id="startBtn">Start</button>
+                    <button id="start-btn" class="btn-quiz" type="button">Start Game</button>
                     <button class="btn-ctrl" id="feedbackBtn">Feedback</button>
+
+                    <!-- TODO remove old start button and related class -->
+                    <button class="btn-ctrl" id="startBtn">oldStart</button>
+                </div>
+            </section>
+
+            <!-- Begin Quiz Section Card -->
+            <section class="quiz-card hide" id="quiz">
+                <div class="quiz-heading">
+                    <h1>Let's play...</h1>
+                </div>
+                <!-- Quiz cancel button - returns to index.html -->
+                <div class="cancel-game">
+                    <a href="index.html" aria-label="Cancel game and back to home">Cancel <i class="fa-regular fa-rectangle-xmark"></i></a>
+                </div>
+                <!-- Score & progress area -->
+                <div class="score-area" id="scoreArea">
+                    <p class="scores">Correct Answers: <span id="correct"></span></p>
+                    <!-- <p class="scores"><span id="questIndex">0</span> / <span id="totalQuestions">0</span></p> -->
+                    <p class="scores" id="counter"></p>
+                    <p class="scores">Incorrect Answers: <span id="incorrect"></span></p>
+                </div>
+                <!-- Main quiz body with questions and answers -->
+                <div id="quest-cont" class="hide">
+                    <div id="quiz-question" class="quiz-question">Question</div>
+                    
+                    <div id="quiz-answers" class="quiz-answers">
+                        <button class="btn-quiz">Answer 1</button>
+                        <button class="btn-quiz">Answer 2</button>
+                        <button class="btn-quiz">Answer 3</button>
+                        <button class="btn-quiz">Answer 4</button>
+                    </div>
+                </div>
+    
+                <!-- Quiz Control Button Section -->
+                <div class="quiz-control">
+                    <button id="next-btn" class="btn-quiz hide" type="button">Next Question</button>
+                    <button id="restart-btn" class="btn-quiz hide" type="button">Restart</button>
                 </div>
             </section>
 
@@ -105,6 +143,8 @@
 
     <!-- Scripts Section-->
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <script src="https://kit.fontawesome.com/c53ba6f7a1.js" crossorigin="anonymous"></script>
 
 </body>
