@@ -8,6 +8,7 @@ const answButtonsElement = document.getElementById('quiz-answers');
 const gameCard = document.getElementById('game');
 const quizCard = document.getElementById('quiz');
 const restartButton = document.getElementById('restart-btn');
+const endButton = document.getElementById('end-btn');
 
 
 // define Variables, which are going to be changed in the function
@@ -27,18 +28,19 @@ nextButton.addEventListener('click', () => {
     // update here also the question count
     getNextQuestion();
 });
+endButton.addEventListener('click', goHome);
 
 
 // Functions section
 
 /**
- * This function will start the game, once the Start Game button is clicked.
- * It will hide the Start Game button and immediately display the first,
- * randomly selected question. We use negative or positive numbers as the sort
- * algorithm (positive one way, negative the other way). To get this neg or pos
- * number, we use Math.rand which gives a rand number betw. 1 and 0. To become
- * negative, we subtract 0.5. The clearCounterState function is called to reset
- * related counters. 
+ * This function will start the game (display card), once the Start Game button
+ * is clicked. It will hide the Start Game & Restart button as well as the whole
+ * gameCard and immediately display the first, randomly selected question.
+ * We use negative or positive numbers as the sort algorithm (positive one way,
+ * negative the other way). To get this neg or pos number, we use Math.rand,
+ * which gives a rand number betw. 1 and 0. To become negative, we subtract 0.5.
+ * The clearCounterState function is called to reset related counters. 
  */
 
 function startGame() {
@@ -136,9 +138,8 @@ function chooseAnswer(klickEvent) {
     if (randQuestions.length > currQuestIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        // remove or update this function to if we are at the end of q's we end game and message
-        // startButton.innerText = 'Restart';
         restartButton.classList.remove('hide');
+        endButton.classList.remove('hide');
     }
     if (correct) {
         let oldCorrect = parseInt(document.getElementById("correct").innerText);
@@ -188,3 +189,10 @@ function clearCounterState() {
     document.getElementById("correct").innerText = 0;
     document.getElementById("incorrect").innerText = 0;
 }
+
+/**
+ * This function will end the game and bring the player back to index.html.
+ */
+ function goHome() {
+    location.href = "index.html";
+  }
