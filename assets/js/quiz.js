@@ -58,6 +58,7 @@ function startGame() {
     // startButton.classList.add('hide');
     gameCard.classList.add('hide')
     restartButton.classList.add('hide');
+    endButton.classList.add('hide');
     quizCard.classList.remove('hide')
     clearCounterState();
     randQuestions = questions.sort(() => Math.random() - .5);
