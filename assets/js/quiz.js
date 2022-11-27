@@ -56,10 +56,10 @@ feedbackBtn.addEventListener('click', goToForm);
 function startGame() {
     // start button moved to game card, no need to hide sicne game card gets hidden
     // startButton.classList.add('hide');
-    gameCard.classList.add('hide')
+    gameCard.classList.add('hide');
     restartButton.classList.add('hide');
     endButton.classList.add('hide');
-    quizCard.classList.remove('hide')
+    quizCard.classList.remove('hide');
     clearCounterState();
     randQuestions = questions.sort(() => Math.random() - .5);
     currQuestIndex = 0;
@@ -151,6 +151,7 @@ function chooseAnswer(klickEvent) {
     } else {
         restartButton.classList.remove('hide');
         endButton.classList.remove('hide');
+        document.getElementById("quizHeading").innerText = 'Congratulations - You have mastered all questions! Can you achieve a better result?';
     }
     if (correct) {
         let oldCorrect = parseInt(document.getElementById("correct").innerText);
@@ -239,5 +240,7 @@ window.onclick = function(event) {
  * This function will hide the game card and display the contact form card
  */
 function goToForm() {
-    location.href = "#form";
+    gameCard.classList.add('hide');
+    const contactForm = document.getElementById('form');
+    contactForm.classList.remove('hide');
   }
