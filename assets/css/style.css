@@ -12,9 +12,11 @@
 
 :root {
     --gradient-lr: linear-gradient(325deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    /* --gradient-lr: linear-gradient(325deg, #d03ff8 0%,#f78a25 50%,#fcc700 100%); */
     /* --gradient-rl: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
-    --gradient-rl: linear-gradient(50deg, #fc7900 60%,#fcc700 100%);
-    --gradient-lr-btm-left: linear-gradient(198deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    --gradient-rl: linear-gradient(135deg, #d03ff8 0%,#f78a25 50%,#fcc700 100%);
+    /* --gradient-rl: linear-gradient(50deg, #fc7900 60%,#fcc700 100%); */
+    /* --gradient-lr-btm-left: linear-gradient(198deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
     --font-marker: 'Permanent Marker', cursive;
     --shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     --btn-backgrnd: rgba(34, 39, 37, 0.6);
@@ -172,7 +174,7 @@
 
 .feedback-card {
     margin: 50px 15px 25px 15px;
-    background: var(--gradient-lr);
+    background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 1.5rem;
@@ -297,16 +299,6 @@
 
 /* Begin Quiz Game Section */
 
-/* Overall wrapper to include gradient background effect. On purpose not applied to main
-section, since it is very likely that this site grows with further sections or divs outside
-main tag */
-.quiz-wrapper {
-    background: var(--gradient-lr-btm-left);
-    /* use full space of screen for gradient background */
-    /* remove this setting and better apply it to the html background */
-    height: 100vh;
-}
-
 .quiz-container {
     display: flex;
     justify-content: center;
@@ -314,7 +306,7 @@ main tag */
 
 /* Quiz main card */
 .quiz-card {
-    background: var(--gradient-lr);
+    background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
     padding: 2rem;
