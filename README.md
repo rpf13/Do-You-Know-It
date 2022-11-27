@@ -8,37 +8,32 @@ Link to deployed site: [Do You Know It?](https://rpf13.github.io/Do-You-Know-It/
 ---
 
 ## Objectives
-This section covers the goals, which I had when doing this project. Not everything is clear form the beginning and it is difficult to estimate the technical effort, since I am new to this field. Therefore, the aim is the MVP with it's main functionality and put all other nice to have features into stretch objective.
+This section covers the goals, which I had when doing this project. Not everything was clear form the beginning and it was difficult to estimate the technical effort, since I am new to this field. Therefore, the aim was the MVP with it's main functionality and put all other nice to have features into stretch objective.
 
 ### Main Objectives
 
-My main objectives for this project (besides the below listed features) were, to get hands on JavaScript interaction with the DOM, but also to get more familiar with the basics of JS as well as trying to challenge myself to use some more advanced JS featues (like using the opentdb api).
-I did also want to get more experiense with flexbox and trying to use css grid, get to know modals.
+My main objectives for this project (besides the below listed features) were, to get hands on JavaScript interaction with the DOM, but also to become more familiar with the basics of JS as well as trying to implement these features in my project.
+I did also want to get more experiense with flexbox and trying to use css grid as well as getting to know modals.
 
 - Using advanced color scheme with multiple colors
 - Main site which uses flexbox / grid to arrange cards, buttons, nav
-- API call ot opentdb to get questions
-- Implement 3 question topics with 3 difficulty levels and the choice of 10, 20 or 30 questions
 - Button to explain game using modals
-- Start button
-- Feedback button, which "scrolls" user down on index.html to contact form
+- Start button, which displays the quiz
+- Feedback button, which relates to a contact form
 - Contact form with name, mail and feedback text. Submit button should trigger modal box with confirmation message and button to go back home
-- Game section using the same color scheme
-- Game section uses flexbox to display the question and all 4 possible answers
-- Submit button will trigger either correct or wrong answer box. Wrong answer box also shows the correct answer
-- Question progress as well as correct / wrong counter i shown
+- Quiz card, which displays the question and gives a choice for the answer
 - Cancel button brings user back to home
-- Social media buttons are on all sites
+- Correct and Incorrect answers are counted and displayed
+- The current state of questions gets displayed, showing at which question of the total the player currently is
+- Github button / corner on the top right corner gets always displayed
 - Sites are built mobile first and scale up for bigger screens
 
 ### Stretch Objectives
 
 The following stretch objectivse are meant as a "nice to have" feature and depending on the time, I will implement them or not.
 
-- Cards on main site flip around after selecting them, showing a related emoji
-- Game shows some "effects" once the user finishes like confetti rain, firework
-- Correct and wrong answer count are realised via emoji (for the text)
 - Timer countdown to answer
+- API call to fetch questions from opentrdb
 
 ## UX & Design
 The main design is based on a colorful, sleek design. It is minimalistic but it contains all necessary elements to have fun.
@@ -47,20 +42,19 @@ This site has been built with the "mobile first" approach in mind. This results 
 
 ### User Stories
 - As a visiting user, I would like to be immediately attracted by beautiful, colorful and minimalistic site
-- As a visiting user, I would like to have an immediate overview of the site and how the game works
-- As a visiting user, I can find an explanation on how to play the game
-- As a visiting user, I can choose from different topics, on which the questions will be displayed
-- As a visiting user, I can choose the difficulty level as well as the amount of questions
-- As a visiting user, I can see the status of the running game, how many questions are left, how many correct and wrong answers
+- As a visiting user, I would like to have an immediate overview of the site and how the quiz works
+- As a visiting user, I can find an explanation on how to play the quiz
+- As a visiting user, I can see the status of the running quiz, how many questions are left, how many correct and wrong answers
 - As a visiting user, I always have the chance to abort the game and go back to the main site
 - As a visiting user, I can fill out a contact form to give feedback
-- As a visiting user, I can visit social media sites via integrated links
-- As a visiting user, I will get a feedback displaying the results, once I have finished all questions.
+- As a visiting user, I can visit the github repo via dedicated link / button
+- As a visiting user, I will get a end of game text, once I have finished all questions. I can see the totals.
 
 
 
 ### Color Scheme
-Therer are two different sets of colors. One set is used to create the various gradient effects, which result in the distinct and very beautiful background effect of every site and most of the cards. I did play with the degree of mixing the colors in order to achieve the result of different effects. The base of the gradient effect are three colors, which are then mixed together.
+There are three different sets of colors. One set is used to create the various gradient effects, which result in the distinct and very beautiful background effect of every site and most of the cards. The second one is used for the background of the individual cards, which contain the actual content. I had to choose a different color set in order to achieve and pass the contrast test. It took quite some effort to find a suitable set, but the result looks great.
+I did also play with the degree of mixing the colors in order to achieve the result of different effects. The base of the gradient effect are three colors, which are then mixed together.
 
 <details>
 <summary>Gradient Base Colors and Gradient Mix</summary>
@@ -68,6 +62,15 @@ Therer are two different sets of colors. One set is used to create the various g
 ![Gradient Base Colors](docs/images/gradient_base_colors.png) 
 
 ![Gradient Base Mix](docs/images/gradient_base_mix.png)
+
+</details>
+
+<details>
+<summary>Gradient Base Colors and Gradient Mix used for the cards</summary>
+
+![Gradient Base Colors](docs/images/gradient_base_colors_card.png) 
+
+![Gradient Base Mix](docs/images/gradient_base_mix_card.png)
 
 </details>
 
