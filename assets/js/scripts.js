@@ -25,6 +25,10 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 let counter = document.getElementById("counter");
 
+let quizTimer = document.getElementById('quizTimer');
+let time = 10;
+let remainTime;
+
 
 // Event listeners section
 
@@ -44,6 +48,26 @@ feedbackBtn.addEventListener('click', goToForm);
 // Functions section
 
 /**
+ * This function will add the countdown timer to the quiz. Not finished yet, still
+ * has some bugs.
+ */
+
+ function countDown() {
+    remainTime = setInterval(()=>{
+      time--;
+      if (time > 0) {
+        quizTimer.innerHTML = `${time} seconds`;
+      } else if (time === 0) {
+        stopCountdown();
+      }
+    }, 1000);
+  }
+   
+ function stopCountdown() {
+   clearInterval(remainTime);
+ }
+
+/**
  * This function will start the game (display card), once the Start Game button
  * is clicked. It will hide the Start Game & Restart button as well as the whole
  * gameCard and immediately display the first, randomly selected question.
@@ -61,11 +85,15 @@ function startGame() {
     endButton.classList.add('hide');
     quizCard.classList.remove('hide');
     clearCounterState();
+    quizTimer.innerHTML = `${time} seconds`;
     randQuestions = questions.sort(() => Math.random() - .5);
     currQuestIndex = 0;
     questContElement.classList.remove('hide');
     getNextQuestion();
 }
+
+
+
 
 /**
  * This function will call the clearQuizContent function, to clear the quiz
@@ -76,7 +104,9 @@ function startGame() {
  */
 
 function getNextQuestion() {
+    stopCountdown()
     clearQuizContent();
+    countDown();
     answButtonsElement.classList.remove('disable-buttons');
     displQuest(randQuestions[currQuestIndex]);
     // remove consol statement
@@ -244,3 +274,4 @@ function goToForm() {
     const contactForm = document.getElementById('form');
     contactForm.classList.remove('hide');
   }
+
