@@ -48,29 +48,44 @@ feedbackBtn.addEventListener('click', goToForm);
 // Functions section
 
 /**
- * This function will add the countdown timer to the quiz. Not finished yet, still
- * has some bugs.
+ * This function will add the countdown timer to the quiz. It will countdown from
+ * start time, as set, and if time is 0, it will call the stopCountdown function
+ * to disable the JS interval. It will set timer text to 0s, add a Game Over text
+ * and disable the answer buttons. It will show the buttons to restart or cancel
+ * the game.
  */
 
- function countDown() {
-    remainTime = setInterval(()=>{
-      time--;
-      if (time > 0) {
-        quizTimer.innerHTML = `${time} seconds`;
-      } else if (time === 0) {
-        stopCountdown();
-      }
-    }, 1000);
-  }
-   
- function stopCountdown() {
-   clearInterval(remainTime);
- }
+function countDown() {
+   remainTime = setInterval(()=>{
+     time--;
+     if (time > 0) {
+       quizTimer.innerHTML = `${time} seconds`;
+     } else if (time === 0) {
+       stopCountdown();
+       quizTimer.innerHTML = `0 seconds`;
+       document.getElementById("quizHeading").innerText = 'Game Over - you are too slow!';
+       answButtonsElement.classList.add('disable-buttons');
+       restartButton.classList.remove('hide');
+       endButton.classList.remove('hide');
+     }
+   }, 1000);
+}
+
+/**
+ * This function will stop the countdown timer by clearing the js interval as set
+ * by the setInterval method (remainTime)
+ */
+
+function stopCountdown() {
+  clearInterval(remainTime);
+}
 
 /**
  * This function will start the game (display card), once the Start Game button
- * is clicked. It will hide the Start Game & Restart button as well as the whole
- * gameCard and immediately display the first, randomly selected question.
+ * is clicked. It will change the quizHeadin inner text, since this might have
+ * been altered via the countDown function. It will hide the Start Game & Restart
+ * button as well as the whole gameCard and immediately display the first, randomly
+ * selected question.
  * We use negative or positive numbers as the sort algorithm (positive one way,
  * negative the other way). To get this neg or pos number, we use Math.rand,
  * which gives a rand number betw. 1 and 0. To become negative, we subtract 0.5.
@@ -80,6 +95,7 @@ feedbackBtn.addEventListener('click', goToForm);
 function startGame() {
     // start button moved to game card, no need to hide sicne game card gets hidden
     // startButton.classList.add('hide');
+    document.getElementById("quizHeading").innerText = "Let's play...";
     gameCard.classList.add('hide');
     restartButton.classList.add('hide');
     endButton.classList.add('hide');
@@ -92,24 +108,24 @@ function startGame() {
     getNextQuestion();
 }
 
-
-
-
 /**
- * This function will call the clearQuizContent function, to clear the quiz
- * section. It will also call the displQuestion function and handover the
+ * This function will clearQuizContent function, to clear the quiz
+ * section. The countDown function will be called again and the time will be set
+ * to the specified time. It will also call the displQuestion function and handover the
  * randQuestion w. the current Question Index, as argument.
  * It will set the question counter and it will enable the click option
  * again on the answer buttons.
  */
 
 function getNextQuestion() {
-    stopCountdown()
+    // stopCountdown() not needed since countdown is set again a few lines below
     clearQuizContent();
     countDown();
+    time = 10;
+    quizTimer.innerHTML = `${time} seconds`;
     answButtonsElement.classList.remove('disable-buttons');
     displQuest(randQuestions[currQuestIndex]);
-    // remove consol statement
+    // remove console statement
     console.log(currQuestIndex);
     counter.innerText = `${currQuestIndex + 1} / ${questions.length}`;
 }
@@ -172,6 +188,7 @@ function clearQuizContent() {
 function chooseAnswer(klickEvent) {
     const klickedButton = klickEvent.target;
     const correct = klickedButton.dataset.correct;
+    stopCountdown()
     answButtonsElement.classList.add('disable-buttons');
     Array.from(answButtonsElement.children).forEach(button => {
         setState(button, button.dataset.correct);
@@ -264,7 +281,7 @@ window.onclick = function(event) {
 
  function hideModal() {
     howToModal.style.display = "none";
-  }
+}
 
 /**
  * This function will hide the game card and display the contact form card
@@ -273,5 +290,5 @@ function goToForm() {
     gameCard.classList.add('hide');
     const contactForm = document.getElementById('form');
     contactForm.classList.remove('hide');
-  }
+}
 

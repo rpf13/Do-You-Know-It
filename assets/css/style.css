@@ -339,12 +339,12 @@
 }
 
 .cancel-game i {
-    font-size: 120%;
+    font-size: 150%;
     color: var(--smk-black);
 }
 
 /* Hover effect to cancel quiz icons */
-.cancel-game i:hover {
+.cancel-game a i:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
