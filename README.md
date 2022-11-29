@@ -127,7 +127,10 @@ As a first step of this project, before any code has been written, I have create
     list out all of your project's features, and make sure to include a screenshot of each!!
 
 ### Features Left to Implement
-    have ideas on what you'd like to add in the future? add them here!! assessors LOVE seeing future concepts!
+The following features should be implemented in a next release. They will bring another challenge to the player but also for me to implement them.
+- Implement the API to call the opentdb dynamically
+- Give the player the option to choose the amount of questions, the different question topics as well as the level of difficulty
+- Implement a leaderboard BUT only if it is persistent and stored in a databease.
 
 ---
 
@@ -168,7 +171,9 @@ I used the following technologies and resources to create this site:
 The following arguments describe *why and how* I have choosen to code certain parts the way they are. This section should give an explanation to my thinking process and explain the reader some conceptual decisions.
 
 ### Mobile First Approach
-The site has been built in a mobile first approach. The goal was to not have to use any media queries but build a fully responsive site. This is achieved with various dynamic settings and flexbox.
+The site has been built in a mobile first approach. The goal was to not have to use any media queries but build a fully responsive site. This project has really helped me to improve my flexbox skills, I wanted to create this card design and have it always centered on
+x and y axis, where as it should stay fully responsive. I have tried several appraoches, but flexbox was the approach, which has worked best.
+I did also start a bit with css grid (which is used to build the grid to display the answers in the quiz), but I have to study this much more.
 
 ### Challenges during Development
 
@@ -178,11 +183,145 @@ Since I did not have unlimited time to create this project, I have decided to st
 
 I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am very happy with the result.
 
+However, I had to adjust the scope again. To be honest, I have started this project from the wrong end but this has teached me a lot. In the next project, I will definitely take another approach. My aim was a bit too high to start with, without knowing all the complex details, some of the features I wanted to implement, will require. I should have studied them first. The whole re-scoping did then impact my initial design idea, which brought up other issues.
+
+End of the story: I HAVE LEARNED A LOT!
+
 ### JavaScript
 
 In order to attack the JavaScript part, I have started with brainstorming about the functions needed in the game. I wanted to have a clear plan, or at least an estimate about the logic to be built. I have created and constantly updated a Mind Map to visually display the logic. It also shows the connection between the functions, which is calling which. Furthermore, some key elements / task in each function are added to explain the purpose better.
 
 ![JS Functions MindMap](docs/wireframes/js_functions.png)
+
+### Ruby Script to fetch the questions via API
+
+The questions for the quiz are stored on a local file called questions.js. I did not "invent" the questions myself, the are taken from the [https://opentdb.com/], via a generated API request URL on their page. The source format, when fetching the api is different than the format, I have used in the quiz. I did definitely not want to re-format them by hand and since due to my dayjob, I have some (beginner) knowledge in Ruby, I have chosen Ruby to fetch the API and reformat the output, save the result in a file on my development machine. 
+
+-> It is totally clear to me, that I have to "translate" this script to Java Script, since the whole procedure is very well possible with Java Script, but given the time available for this project, I did choose to use Ruby first, and do the JS script later.
+
+<details>
+<summary>Ruby Script to generate the correct quiz question data format</summary>
+
+```
+
+# This little ruby script will execute a get request on the Open Trivia DB opentdb.com and
+# convert the response in the data format, which is needed to feed the quiz question file.
+
+require 'httparty'
+require 'pry'
+require 'prettyprint'
+require 'json'
+
+
+
+questions = []
+response = HTTParty.get('https://opentdb.com/api.php?amount=30&type=multiple')
+
+
+response['results'].each do |h|
+  quest = {}
+  quest[:question] = ''
+  quest[:answers] = []
+  h.each_pair do |k,v|
+
+    if k == 'question'
+      quest[:question] = v.encode
+    elsif k == 'correct_answer'
+      answer = {}
+      answer[:text] = v
+      answer[:correct] = true
+      quest[:answers] << answer
+    elsif k == 'incorrect_answers'
+      v.each do |incorrect|
+        answer = {}
+        answer[:text] = incorrect
+        answer[:correct] = false
+        quest[:answers] << answer
+      end
+    end
+  end
+  questions << quest
+end
+
+x = JSON.pretty_generate(questions)
+
+File.write("questions.js", x)
+
+
+
+
+# original datastructure, when fetching api:
+
+
+# {"response_code"=>0,
+#   "results"=>
+#    [{"category"=>"Geography",
+#      "type"=>"multiple",
+#      "difficulty"=>"medium",
+#      "question"=>"Broome is a town in which state of Australia?",
+#      "correct_answer"=>"Western Australia",
+#      "incorrect_answers"=>["Northern Territory", "South Australia", "Tasmania"]},
+#     {"category"=>"Entertainment: Books",
+#      "type"=>"multiple",
+#      "difficulty"=>"medium",
+#      "question"=>"What book series published by Jim Butcher follows a wizard in modern day Chicago?",
+#      "correct_answer"=>"The Dresden Files",
+#      "incorrect_answers"=>["A Hat in Time", "The Cinder Spires", "My Life as a Teenage Wizard"]}]}
+
+
+
+# target datastructure, needed for the quiz as input:
+
+# [
+#   {
+#     "question": "Which of these book series is by James Patterson?",
+#     "answers": [
+#       {
+#         "text": "Maximum Ride",
+#         "correct": true
+#       },
+#       {
+#         "text": "Harry Potter",
+#         "correct": false
+#       },
+#       {
+#         "text": "The Legend of Xanth",
+#         "correct": false
+#       },
+#       {
+#         "text": "The Bartemaeus Trilogy",
+#         "correct": false
+#       }
+#     ]
+#   },
+#   {
+#     "question": "What was the original release date of Grand Theft Auto V?",
+#     "answers": [
+#       {
+#         "text": "September 17, 2013",
+#         "correct": true
+#       },
+#       {
+#         "text": "August 17, 2013",
+#         "correct": false
+#       },
+#       {
+#         "text": "April 14, 2015",
+#         "correct": false
+#       },
+#       {
+#         "text": "November 18, 2014",
+#         "correct": false
+#       }
+#     ]
+#   }
+# ]
+
+```
+
+
+</details>
+
 
 ### Commit messages
 
