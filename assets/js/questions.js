@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Actual questions unsed for the quiz. Data structure is an array,
 // with k,v pair for the queston and a k,v pair for the answers. The
 // answers itself are another array, which contain for each answer two

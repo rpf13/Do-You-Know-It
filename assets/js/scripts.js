@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Reference definitions to html DOM elements
 
 const startButton = document.getElementById('start-btn');
@@ -50,19 +52,21 @@ feedbackBtn.addEventListener('click', goToForm);
 /**
  * This function will add the countdown timer to the quiz. It will countdown from
  * start time, as set, and if time is 0, it will call the stopCountdown function
- * to disable the JS interval. It will set timer text to 0s, add a Game Over text
- * and disable the answer buttons. It will show the buttons to restart or cancel
- * the game.
+ * to disable the JS interval. It will set countdown timer text accordingly, add
+ * a Game Over text and disable the answer buttons. It will show the buttons
+ * to restart or cancel the game.
  */
 
 function countDown() {
+    time = 10;
+    quizTimer.innerHTML = `${time} seconds`;
    remainTime = setInterval(()=>{
      time--;
-     if (time > 0) {
+     if (time >= 0) {
        quizTimer.innerHTML = `${time} seconds`;
-     } else if (time === 0) {
+     } 
+     if (time === 0) {
        stopCountdown();
-       quizTimer.innerHTML = `0 seconds`;
        document.getElementById("quizHeading").innerText = 'Game Over - you are too slow!';
        answButtonsElement.classList.add('disable-buttons');
        restartButton.classList.remove('hide');
@@ -110,7 +114,7 @@ function startGame() {
 
 /**
  * This function will clearQuizContent function, to clear the quiz
- * section. The countDown function will be called again and the time will be set
+ * section. The countDown function will be called again and therefore time will be set
  * to the specified time. It will also call the displQuestion function and handover the
  * randQuestion w. the current Question Index, as argument.
  * It will set the question counter and it will enable the click option
@@ -121,8 +125,6 @@ function getNextQuestion() {
     // stopCountdown() not needed since countdown is set again a few lines below
     clearQuizContent();
     countDown();
-    time = 10;
-    quizTimer.innerHTML = `${time} seconds`;
     answButtonsElement.classList.remove('disable-buttons');
     displQuest(randQuestions[currQuestIndex]);
     // remove console statement
