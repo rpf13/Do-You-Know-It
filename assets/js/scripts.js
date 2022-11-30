@@ -1,5 +1,12 @@
 /* jshint esversion: 11 */
 
+// This const questions definition will take all questions out of the questions.js
+// file and randomize the order. It will then take the first 10 questions out
+// of the array. Since the array gets randomized before, the 10 will be random.
+// The questions array will then be the base data to work with in this file.
+
+const questions = rawQuestions.sort(() => Math.random() - 0.5).slice(0,10);
+
 // Reference definitions to html DOM elements
 
 const startButton = document.getElementById('start-btn');
@@ -130,7 +137,8 @@ function getNextQuestion() {
  * This function will display the question - access the DOM element.
  * It will take randQuestOfArray as input parameter and out of that,
  * display k,v question.
- * It will loop over the anser k, v pair and create a button element
+ * It will first randomize the answers order (to prevent the same answer always
+ * on the same position), loop over the answer k, v pair and create a button element
  * for each of them and set the text. If the value of the answer is correct,
  * the dataset of that button will be set to correct. An event listener
  * will call the chooseAnswer function and handover the event of "clicking" the button.
