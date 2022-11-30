@@ -141,6 +141,8 @@ function getNextQuestion() {
 
 function displQuest(randQuestOfArray) {
     questElement.innerText = randQuestOfArray.question;
+    // randQuestOfArray.answers.forEach(answer => {
+    randQuestOfArray.answers.sort(() => Math.random() - 0.5)
     randQuestOfArray.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -284,7 +286,8 @@ window.onclick = function(event) {
  */
 function goToForm() {
     gameCard.classList.add('hide');
-    const contactForm = document.getElementById('form');
-    contactForm.classList.remove('hide');
+    // const contactForm = document.getElementById('form');
+    // contactForm.classList.remove('hide');
+    document.getElementById('form').classList.remove('hide');
 }
 
