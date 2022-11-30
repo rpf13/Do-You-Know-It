@@ -184,11 +184,30 @@
     justify-content: center;
 }
 
+/* Feedback Cancel button, which sends player back home */
+.feedback-cancel {
+    text-decoration: none;
+    color: var(--smk-black);
+    text-align: right;
+    width: 100%;
+}
+
+.feedback-cancel i {
+    font-size: 1.5rem;
+    color: var(--smk-black);
+}
+
+/* Hover effect to cancel quiz icons */
+.feedback-cancel i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 .feedback-title {
     font-family: var(--font-marker);
     font-size: 2.5rem;
     letter-spacing: 2px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .feedback-text {
