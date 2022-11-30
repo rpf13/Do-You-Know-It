@@ -47,7 +47,7 @@
 .overall-wrapper {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
 /* Game container - valid for whole game content - shared */
@@ -450,36 +450,10 @@
     right: 0;
 }
 
+/* Media Query for screen sizes of 800px or larger */
 
-
-/* DELETE FOOTER IF NOT NEEDED */
-
-
-/* Begin Footer section*/
-footer p {
-    text-align: center;
-    padding: 10px 0 10px 0;
-    font-size: .9rem;
-}
-
-.social-networks {
-    text-align: center;
-    background-color: var(--smk-black);
-}
-
-.social-networks > li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 150%;
-    margin: 1rem;
-    padding: 1rem;
-    color: var(--white);
-}
-
-/* Hover effect to social media icons */
-.social-networks i:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+@media screen and (min-width: 800px) {
+    .overall-wrapper {
+        width: 80%;
+    }
 }
