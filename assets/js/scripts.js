@@ -16,21 +16,15 @@ const howToModal = document.getElementById('howToModal');
 const closeBtn = document.getElementsByClassName('modal-close-btn')[0];
 const feedbackBtn = document.getElementById('feedbackBtn');
 
-
-
-
-
-// define Variables, which are going to be changed in the function
+// define Variables, which are going to be changed in the functions
 
 let randQuestions, currQuestIndex;
-let correctAnswers = 0;
-let incorrectAnswers = 0;
+// let correctAnswers = 0;
+// let incorrectAnswers = 0;
 let counter = document.getElementById("counter");
-
 let quizTimer = document.getElementById('quizTimer');
 let time = 10;
 let remainTime;
-
 
 // Event listeners section
 
@@ -106,7 +100,7 @@ function startGame() {
     quizCard.classList.remove('hide');
     clearCounterState();
     quizTimer.innerHTML = `${time} seconds`;
-    randQuestions = questions.sort(() => Math.random() - .5);
+    randQuestions = questions.sort(() => Math.random() - 0.5);
     currQuestIndex = 0;
     questContElement.classList.remove('hide');
     getNextQuestion();
@@ -190,7 +184,7 @@ function clearQuizContent() {
 function chooseAnswer(klickEvent) {
     const klickedButton = klickEvent.target;
     const correct = klickedButton.dataset.correct;
-    stopCountdown()
+    stopCountdown();
     answButtonsElement.classList.add('disable-buttons');
     Array.from(answButtonsElement.children).forEach(button => {
         setState(button, button.dataset.correct);
@@ -267,7 +261,7 @@ window.onclick = function(event) {
     if (event.target == howToModal) {
     howToModal.style.display = "none";
     }
-}
+};
 
 /**
  * This function will diplay the modal window once the How to Play button is clicked
