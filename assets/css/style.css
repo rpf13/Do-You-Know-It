@@ -51,7 +51,7 @@
 }
 
 /* Game container - valid for whole game content - shared */
-.game-container {
+.overall-container {
     /* max-width: 80%; */
     padding: 2rem;
     display: flex;

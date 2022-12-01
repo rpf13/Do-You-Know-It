@@ -8,16 +8,17 @@
     <meta name="keywords" content="game, quiz, trivia, knowledge">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="docs/images/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico">
     <title>Do you know it?</title>
 </head>
+<!-- Nested flexbox construct, starts on body to achieve total centering of the cards on x and y axis. Home of background gradient. -->
 <body class="body-class">
 
-
-     <!-- Begin overall wrapper to contain most of the sections -->
+     <!-- Begin overall wrapper to contain all cards -->
      <div class="overall-wrapper">
-        <!-- container can maybe be general for everyone - check!!!! -->
-        <div class="game-container">
+        <!-- Overall container to define a "frame" for all the cards  -->
+        <div class="overall-container">
             <!-- Begin Main Game Section Card -->
             <section class="game-card" id="game">
                 <h1 class="game-title">Do you know it?</h1>
@@ -74,6 +75,7 @@
 
             <!-- Begin Feedback Section Card -->
             <section class="feedback-card hide" id="form">
+                <!-- Feedback cancel button - returns to index.html -->
                 <a class="feedback-cancel" href="index.html" aria-label="Cancel feedback and back to home">Cancel <i class="fa-solid fa-rectangle-xmark"></i></a>
                 <h2 class="feedback-title">Feedback Welcome!</h2>
                 <p class="feedback-text">
