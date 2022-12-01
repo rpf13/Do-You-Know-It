@@ -290,6 +290,7 @@
 
 /* Begin Feedback card section, which contains the feedback form */
 .feedback-card {
+    /* check margin especially on small screen sizes */
     margin: 50px 15px 25px 15px;
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
@@ -324,12 +325,12 @@
     font-family: var(--font-marker);
     font-size: 2.5rem;
     letter-spacing: 2px;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .feedback-text {
     text-align: justify;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     font-size: 1.1rem;
 }
 
