@@ -2,7 +2,7 @@
 
 // This const questions definition will take all questions out of the questions.js
 // file and randomize the order. It will then take the first 10 questions out
-// of the array. Since the array gets randomized before, the 10 will be random.
+// of the array. Since the array gets randomized before, the 10 questions will be random.
 // The questions array will then be the base data to work with in this file.
 
 const questions = rawQuestions.sort(() => Math.random() - 0.5).slice(0,10);
@@ -52,10 +52,12 @@ feedbackBtn.addEventListener('click', goToForm);
 
 /**
  * This function will add the countdown timer to the quiz. It will countdown from
- * start time, as set, and if time is 0, it will call the stopCountdown function
+ * start time as set, and if time is 0, it will call the stopCountdown function
  * to disable the JS interval. It will set countdown timer text accordingly, add
  * a Game Over text and disable the answer buttons. It will show the buttons
- * to restart or cancel the game.
+ * to restart or cancel the game. The additional specification of the time intervall
+ * inside this function is necessary, since everytime the function gets called, it needs
+ * to be resetted. It is not enough to only define it globally.
  */
 
 function countDown() {
@@ -167,7 +169,7 @@ function displQuest(randQuestOfArray) {
  * This function will clear the whole quiz content (question, answers), once a new question
  * gets displayed.
  * The while loop makes sure, the buttons with the old answer are deleted. Since the new buttons
- * with the new answers will appended in the DisplQuest function, they are 2nd child element.
+ * with the new answers will be appended in the DisplQuest function, they are 2nd child element.
  * Therefore we have to make sure, we delete the first child element, with the old answers.
  */
 
@@ -236,9 +238,9 @@ function setState(element, correct) {
 }
 
 /**
- * This function will take the button class element (correct or wrong) we got from setState function
- * @param {*} clearElement The button class element altered from setState function
- */
+* This function will take the button class element (correct or wrong) we got from setState function
+* @param {*} clearElement The button class element altered from setState function
+*/
 
 function clearState(clearElement) {
     clearElement.classList.remove('correct');
@@ -246,9 +248,9 @@ function clearState(clearElement) {
 }
 
 /**
- * This function will clear the state of correct / incorrect question counter
- * and therefore set the value of the text displayed back to 0.
- */
+* This function will clear the state of correct / incorrect question counter
+* and therefore set the value of the text displayed back to 0.
+*/
 
 function clearCounterState() {
     document.getElementById("correct").innerText = 0;
@@ -256,16 +258,16 @@ function clearCounterState() {
 }
 
 /**
- * This function will end the game and bring the player back to index.html.
- */
- function goHome() {
-    location.href = "index.html";
-  }
+* This function will end the game and bring the player back to index.html.
+*/
 
-  /**
- * This function will hide the modal once any area outside the modal
- * is clicked
- */
+function goHome() {
+   location.href = "index.html";
+ }
+
+/**
+* This function will hide the modal once any area outside the modal is clicked
+*/
 
 window.onclick = function(event) {
     if (event.target == howToModal) {
@@ -274,24 +276,25 @@ window.onclick = function(event) {
 };
 
 /**
- * This function will diplay the modal window once the How to Play button is clicked
- */
+* This function will diplay the modal window once the How to Play button is clicked
+*/
 
- function displayModal() {  
-    howToModal.style.display = "block";
+function displayModal() {  
+   howToModal.style.display = "block";
 }
 
 /**
  * This function will hide the modal once the close button inside modal is clicked
  */
 
- function hideModal() {
-    howToModal.style.display = "none";
+function hideModal() {
+   howToModal.style.display = "none";
 }
 
 /**
  * This function will hide the game card and display the contact form card
  */
+
 function goToForm() {
     gameCard.classList.add('hide');
     // const contactForm = document.getElementById('form');
