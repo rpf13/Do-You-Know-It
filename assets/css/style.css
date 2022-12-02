@@ -51,7 +51,7 @@
 /* Overall generic container - valid for all cards */
 .overall-container {
     /* max-width: 80%; */
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -63,7 +63,7 @@
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -74,22 +74,20 @@
 
 .game-title {
     font-family: var(--font-marker);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     text-align: center;
 }
 
 .game-text {
     text-align: justify;
-    padding: 1.5rem;
-    font-size: 1.1rem;
+    padding: 1rem;
 }
 
 /* Game card control button section */
 .control-menu {
     margin: 0px 15px 15px 15px;
     border-radius: 10px;
-    padding: 1rem;
     text-align: center;
     /* flex: 1 1 45ch; */
     display: flex;
@@ -105,7 +103,6 @@
     box-shadow: var(--shadow);
     color: var(--white);
     border-radius: .5rem;
-    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     flex: 0 1 15ch;
@@ -126,7 +123,7 @@
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -145,8 +142,7 @@
     padding: 1rem 0;
     font-family: var(--font-marker);
     text-transform: uppercase;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
 }
 
 /* Quiz cancel section with countdown timer and cancel button */
@@ -157,7 +153,6 @@
 }
 
 .cancel-game i {
-    font-size: 150%;
     color: var(--smk-black);
 }
 
@@ -183,7 +178,7 @@
 /* Question and answers section inside quiz card */
 .quiz-question {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .quiz-answers {
@@ -195,7 +190,7 @@
 /* Quiz control button section */
 .quiz-control {
     /* text-align: center; */
-    padding: 1.5rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -208,7 +203,6 @@
     box-shadow: var(--shadow);
     color: var(--white);
     border-radius: .5rem;
-    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     flex: 0 1 15ch;
@@ -251,16 +245,16 @@
 .modal-content {
     text-align: center;
     margin: 15vh auto;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
     max-width: 750px;
     background: var(--gradient-rl);
 }
 
 .modal-title {
     font-family: var(--font-marker);
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 1.2rem;
 }
@@ -273,7 +267,7 @@
 
 .modal-list li {
     padding: .3rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* font-weight: 600; */
 }
 
@@ -291,11 +285,11 @@
 /* Begin Feedback card section, which contains the feedback form */
 .feedback-card {
     /* check margin especially on small screen sizes */
-    margin: 50px 15px 25px 15px;
+    /* margin: 50px 15px 25px 15px; */
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
@@ -306,12 +300,12 @@
 .feedback-cancel {
     text-decoration: none;
     color: var(--smk-black);
-    text-align: right;
+    text-align: left;
     width: 100%;
+    font-size: 0.9rem;
 }
 
 .feedback-cancel i {
-    font-size: 1.5rem;
     color: var(--smk-black);
 }
 
@@ -323,15 +317,13 @@
 
 .feedback-title {
     font-family: var(--font-marker);
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .feedback-text {
     text-align: justify;
     /* padding: 1.5rem; */
-    font-size: 1.1rem;
 }
 
 /* Feedback form w. contact details & free text field */
@@ -345,7 +337,6 @@
 
 .text-input {
     margin: .5rem 0 .5rem 0;
-    line-height: 1.5rem;
     padding: .2rem .4rem;
     border-radius: .2rem;
     box-shadow: var(--shadow);
@@ -353,7 +344,6 @@
 
 .feedback-input {
     margin: .5rem 0 .5rem 0;
-    line-height: 1.5rem;
     padding: .2rem .4rem;
     border-radius: .2rem;
     box-shadow: var(--shadow);
@@ -367,7 +357,6 @@
     box-shadow: var(--shadow);
     color: var(--white);
     border-radius: .5rem;
-    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -394,20 +383,19 @@
 /* Overall container, which contains the card itself */
 .conf-container {
     display: flex;
-    max-width: 80%;
-    padding: 2rem;
+    max-width: 90%;
+    padding: 1rem;
     flex-direction: column; 
     justify-content: center;
 }
 
-/* Confirmation card */
+/* Confirmation site card */
 .conf-card {
     border: solid var(--smk-black);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1rem;
     flex-wrap: wrap;
-    gap: 3px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -416,20 +404,19 @@
 
 .conf-title {
     font-family: var(--font-marker);
-    font-size: 3rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     text-align: center;
 }
 
 .conf-text {
     text-align: center;
-    padding: 1.5rem;
-    font-size: 1.3rem;
+    padding: 0.8rem;
 }
 
 #conf-text-bye {
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -451,9 +438,140 @@
 }
 
 /* Begin media query section */
+
 /* Media Query for screen sizes of 800px or larger */
 @media screen and (min-width: 800px) {
     .overall-wrapper {
         width: 80%;
+    }
+}
+
+/* Media Query for screen sizes of 600px or larger */
+/* Basically setting the whole App to "normal size" */
+
+@media screen and (min-width: 600px) {
+    /* Overall generic container */
+    .overall-container {
+        padding: 2rem;
+    }
+
+    /* Game card section */
+    .game-card {
+        padding: 2rem;
+    }
+
+    .game-title {
+        font-size: 2.5rem;
+    }
+
+    .game-text {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .control-menu {
+        padding: 1rem;
+    }
+
+    .btn-ctrl {
+        font-size: 1.2rem;
+    }
+
+    /* Quiz card section */
+    .quiz-card {
+        padding: 2rem;
+    }
+
+    .quiz-heading h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .cancel-game i {
+        font-size: 1.5rem;
+    }
+
+    .quiz-question {
+        font-size: 1.5rem;
+    }
+
+    .btn-quiz {
+        font-size: 1.2rem;
+    }
+
+    .quiz-control {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    /* Begin modal section */
+    .modal-content {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .modal-list li {
+        font-size: 1.2rem;
+    }
+
+    /* Begin feedback section */
+    .feedback-card {
+        padding: 1.5rem;
+    }
+
+    .feedback-cancel {
+        text-align: right;
+    }
+
+    .feedback-cancel i {
+        font-size: 1.5rem;
+    }
+
+    .feedback-title {
+        font-size: 2.5rem;
+    }
+
+    .feedback-text {
+        font-size: 1.1rem;
+    }
+
+    .text-input {
+        line-height: 1.5rem;
+    }
+
+    .feedback-input {
+        line-height: 1.5rem;
+    }
+
+    .btn-form {
+        font-size: 1.2rem;
+    }
+
+    /* Begin confirmation site section */
+    .conf-container {
+        max-width: 80%;
+        padding: 2rem;
+    }
+
+    .conf-card {
+        padding: 1.5rem;
+    }
+
+    .conf-title {
+        font-size: 2.5rem;
+    }
+
+    .conf-text {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    #conf-text-bye {
+        padding: 1.5rem;
+        font-size: 1.5rem;
     }
 }
