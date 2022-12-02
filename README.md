@@ -33,24 +33,26 @@ I did also want to get more experiense with flexbox and trying to use css grid a
 The following stretch objectivse are meant as a "nice to have" feature and depending on the time, I will implement them or not.
 
 - Timer countdown to answer
-- API call to fetch questions from opentrdb
+- Script to fetch questions from API and format them into the target format, fill the Questions file with it
+- Randomize the answer display order
+- Add only a certain amount of questions out of the questions array, to the quiz
+- Randomize the questions added to the quiz
+- API call to fetch questions from opentdb - basically fully integrate the API with all related tasks like error handling, into the quiz. This objective would replace the stretch objective to generate a separate script to fetch questions.
 
 ## UX & Design
 The main design is based on a colorful, sleek design. It is minimalistic but it contains all necessary elements to have fun.
 
-This site has been built with the "mobile first" approach in mind. This results in a very responsive and easy to navigate site, independet of the medium, which is used to access it.
+This site has been built with the "mobile first" approach in mind. This results in a very responsive and easy to navigate site, independet of the medium, which is used to access it. The whole site scales down to devices with 250px width, hence completely responsive. 
 
 ### User Stories
-- As a visiting user, I would like to be immediately attracted by beautiful, colorful and minimalistic site
+- As a visiting user, I would like to be immediately attracted by a beautiful, colorful and minimalistic site
 - As a visiting user, I would like to have an immediate overview of the site and how the quiz works
 - As a visiting user, I can find an explanation on how to play the quiz
 - As a visiting user, I can see the status of the running quiz, how many questions are left, how many correct and wrong answers
 - As a visiting user, I always have the chance to abort the game and go back to the main site
 - As a visiting user, I can fill out a contact form to give feedback
 - As a visiting user, I can visit the github repo via dedicated link / button
-- As a visiting user, I will get a end of game text, once I have finished all questions. I can see the totals.
-
-
+- As a visiting user, I will get an end of game text, once I have finished all questions. From there I can replay the game or go back to the main site.
 
 ### Color Scheme
 There are three different sets of colors. One set is used to create the various gradient effects, which result in the distinct and very beautiful background effect of every site and most of the cards. The second one is used for the background of the individual cards, which contain the actual content. I had to choose a different color set in order to achieve and pass the contrast test. It took quite some effort to find a suitable set, but the result looks great.
@@ -74,7 +76,7 @@ I did also play with the degree of mixing the colors in order to achieve the res
 
 </details>
 
-For the rest of site, I used the following colors, which are simple but build a nice and clear contrast to the gradient color palette.
+For the rest of the site, I have used the following colors, which are simple but build a nice and clear contrast to the gradient color palette.
 
 <details>
 <summary>Generic Colors</summary>
@@ -104,7 +106,7 @@ I used [Google Fonts](https://fonts.google.com/) to import "Roboto" as my main f
 </details>
 
 ### Wireframes
-As a first step of this project, before any code has been written, I have created Wireframes for Mobile and Desktop version. I have used Balsamiq to create them.
+As a first step of this project, before any code has been written, I have created Wireframes for Mobile and Desktop versions. I have used Balsamiq to create them.
 
 <details>
 <summary>Mobile Wireframe</summary>
@@ -128,7 +130,7 @@ As a first step of this project, before any code has been written, I have create
 
 ### Features Left to Implement
 The following features should be implemented in a next release. They will bring another challenge to the player but also for me to implement them.
-- Implement the API to call the opentdb dynamically
+- Implement an API call the opentdb to dynamically fetch questions - built in directly to the quiz.
 - Give the player the option to choose the amount of questions, the different question topics as well as the level of difficulty
 - Implement a leaderboard BUT only if it is persistent and stored in a databease.
 
@@ -163,15 +165,20 @@ I used the following technologies and resources to create this site:
     - Wave has been used to test the accessibility
 - [MindNode](https://www.mindnode.com)
     - MindNode has been used to create the JS MindMaps
+- [Open Trivia Database](https://opentdb.com)
+    - The Open Trivia Database is the source for the questions
+- [Favicon.io](https://favicon.io)
+    - Favicon.io has been used to generate the favicon
 
 ---
 
 ## Development
 
-The following arguments describe *why and how* I have choosen to code certain parts the way they are. This section should give an explanation to my thinking process and explain the reader some conceptual decisions.
+The following chapters describe *why and how* I have choosen to code certain parts the way they are. This section should give an explanation to my thinking process and explain the reader some conceptual decisions.
 
 ### Mobile First Approach
-The site has been built in a mobile first approach. The goal was to not have to use any media queries but build a fully responsive site. This project has really helped me to improve my flexbox skills, I wanted to create this card design and have it always centered on
+The site has been built in a mobile first approach. The goal was to have a fully responsive design, no matter which device is used. Media queries should only be necessary to adapt font-sizes and padding.
+This project has really helped me to improve my flexbox skills, I wanted to create this card design and have it always centered on
 x and y axis, where as it should stay fully responsive. I have tried several appraoches, but flexbox was the approach, which has worked best.
 I did also start a bit with css grid (which is used to build the grid to display the answers in the quiz), but I have to study this much more.
 
@@ -183,19 +190,20 @@ Since I did not have unlimited time to create this project, I have decided to st
 
 I quickly came up with another solution, using Flexbox, which I have already studied quite a lot during my first portfolio project. With this, I did a refactoring of the whole structure and ended up with a beautiful, simple and clean but completely responsive layout. I am very happy with the result.
 
-However, I had to adjust the scope again. To be honest, I have started this project from the wrong end but this has teached me a lot. In the next project, I will definitely take another approach. My aim was a bit too high to start with, without knowing all the complex details, some of the features I wanted to implement, will require. I should have studied them first. The whole re-scoping did then impact my initial design idea, which brought up other issues.
+However, I had to adjust the scope again. To be honest, I have started this project from the wrong end, but this has teached me a lot. In the next project, I will definitely take another approach. My aim was a bit too high to start with, without knowing all the complex technical details, some of the features I wanted to implement, would require. I should have studied them first. The whole re-scoping did then impact my initial design idea, which brought up other issues.
 
 End of the story: I HAVE LEARNED A LOT!
 
 ### JavaScript
 
 In order to attack the JavaScript part, I have started with brainstorming about the functions needed in the game. I wanted to have a clear plan, or at least an estimate about the logic to be built. I have created and constantly updated a Mind Map to visually display the logic. It also shows the connection between the functions, which is calling which. Furthermore, some key elements / task in each function are added to explain the purpose better.
+The Java Script code also contains a lot of quite detailed explanation for each function. To me, as a beginner, such descriptions are the key to follow the code and I wanted to make sure, it is clearly described inside the code, what each function does. I am always very thankful, if others are following the same approach, when writing their code - it helps a lot to quickly understand.
 
 ![JS Functions MindMap](docs/wireframes/js_functions.png)
 
 ### Ruby Script to fetch the questions via API
 
-The questions for the quiz are stored on a local file called questions.js. I did not "invent" the questions myself, the are taken from the [https://opentdb.com/], via a generated API request URL on their page. The source format, when fetching the api is different than the format, I have used in the quiz. I did definitely not want to re-format them by hand and since due to my dayjob, I have some (beginner) knowledge in Ruby, I have chosen Ruby to fetch the API and reformat the output, save the result in a file on my development machine. 
+The questions for the quiz are stored on a local file called questions.js. I did not "invent" the questions myself, they are taken from the [https://opentdb.com/], via a generated API request URL on their page. The source format, when fetching the api is different than the format, I have used in the quiz. I did definitely not want to re-format them by hand and since due to my dayjob, I have some (beginner) knowledge in Ruby, I have chosen Ruby to fetch the API and reformat the output, save the result in a file on my development machine. 
 
 -> It is totally clear to me, that I have to "translate" this script to Java Script, since the whole procedure is very well possible with Java Script, but given the time available for this project, I did choose to use Ruby first, and do the JS script later.
 
@@ -325,9 +333,9 @@ File.write("questions.js", x)
 
 ### Commit messages
 
-- I have decided to mostly use multiline commit messages. Commit messages are an essential part of the whole project and a single line commit message is just not enough to explain. After reading [this interesting article](https://cbea.ms/git-commit/), it was clear to me, that I have to use it.
+I have decided to mostly use multiline commit messages. Commit messages are an essential part of the whole project and a single line commit message is just not enough to explain. After reading [this interesting article](https://cbea.ms/git-commit/), it was clear to me, that I have to use it.
 
-- I have decided to use conventional commits, as described this [cheatsheet](https://cbea.ms/git-commit/) or as also described in the LMS of the Code Institute. I did use the following syntax guidline:
+I have decided to use conventional commits, as described this [cheatsheet](https://cbea.ms/git-commit/) or as also described in the LMS of the Code Institute. I did use the following syntax guidline:
     * **feat:** for feature which may or may not include a CSS part
 	* **fix:** for a bugfix
 	* **style:** for changes to CSS or to give style to the code itself
@@ -367,13 +375,29 @@ Please note that in order to directly open the project in Gitpod, you need to ha
 ---
 
 ## Credits
-    explain about any particular places you took inspiration from
+### Code
+
+For this project, I had to do lots of research. The Code Institute's Java Script section in the LMS was the base for this project. Also did their Love Running walkthrough project help me to understand certian concepts. Apart from that, I have used the following resources
+
+- [w3schools](https://www.w3schools.com) has been my primary go to resource to look up syntax, concepts and help for html, css and java script
+- The w3schools [article](https://www.w3schools.com/howto/howto_css_modals.asp) about CSS modals, has helped me to understand the concept and implement it on my site.
+- [This Tutorial](https://tutorial.eyehunts.com/js/javascript-timer-countdown-with-seconds-example-code/) combined with the tutorial on [w3schools](https://www.w3schools.com/js/js_timing.asp) has helped me to understand the JS timing events.
+- The tutorials of the awesome [Kevin Powell](https://www.youtube.com/@KevinPowell) have helped me a lot for my understanding of flexbox. Also the [css tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) guide was a big inspiration.
+- [css tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) along with [this](https://youtu.be/3elGSZSWTbM) tutorial also helped me to understand css grid.
+- [Kyle](https://youtu.be/riDzcEQbX6k) as well as the [tutorial](https://youtu.be/zgHim4ZDpZY) of the awesome Ania Kubów have helped me to understand the concepts on how to build the JS part logic. Also [James Quick](https://youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) has an awesome playlist, where he showcases a trivia app. Watching this, was very helpful.
+- The book [Eloquent JavaScript](https://eloquentjavascript.net/index.html), which has been recommended to me by CodeInstitute's "Eventyret_mentor", was a very great resource to look up Java Script related questions.
+- w3school's [article](https://www.w3schools.com/csSref/func_linear-gradient.php) about gradient color designs, have helped me to understand how this works.
+
 
 ### Content
-    list out any URLs or links where you might've borrowed a snippet of code, or element
+- The main content and design of this site is my own work
+- The credits for all the questions and answers go to the amazing [Open Trivia Database Project](https://opentdb.com)
 
 ### Media
-    list out any URLs for images/videos/audios you've borrowed from online (Markdown Table works best here!)
+- The favicon has been taken from [Favicon.io](https://favicon.io)
+- [Fontawesome](https://fontawesome.com) has been used for all icons.
 
 ### Acknowledgements
-    list out any acknowledgements you have, if any... tutor support? fellow Slack student help? spouse, loved one, family member, etc.
+- The biggest motivation and critical feedback, I got from my mentor Tim Nelson. A very big THANK YOU Tim, for giving me guidance, technical advice but also motivation to not give up and always try to implement "one more thing". I am truly thankful for having you as my mentor.
+- Without the support of my wife and my little son, it would not have been possible to spend endless hours, working on this project and doing research. Many thanks to my little son for giving me a smile and very welcomed distraction, during times I was frustrated.
+- Thanks to all the friends and co workers, who have tested out the application on their devices.
