@@ -5,7 +5,7 @@
 // of the array. Since the array gets randomized before, the 10 questions will be random.
 // The questions array will then be the base data to work with in this file.
 
-const questions = rawQuestions.sort(() => Math.random() - 0.5).slice(0,10);
+const questions = rawQuestions.sort(() => Math.random() - 0.5).slice(0,20);
 
 // Reference definitions to html DOM elements
 
@@ -30,7 +30,7 @@ let randQuestions, currQuestIndex;
 // let incorrectAnswers = 0;
 let counter = document.getElementById("counter");
 let quizTimer = document.getElementById('quizTimer');
-let time = 10;
+let time = 45;
 let remainTime;
 
 // Event listeners section
@@ -61,7 +61,7 @@ feedbackBtn.addEventListener('click', goToForm);
  */
 
 function countDown() {
-    time = 10;
+    time = 45;
     quizTimer.innerHTML = `${time} seconds`;
    remainTime = setInterval(()=>{
      time--;
