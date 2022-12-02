@@ -989,7 +989,7 @@ const rawQuestions = [
         "correct": false
       },
       {
-        "text": "Hell&#039;s Kitchen",
+        "text": "Hell's Kitchen",
         "correct": false
       }
     ]
