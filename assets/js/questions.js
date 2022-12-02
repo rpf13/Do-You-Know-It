@@ -53,7 +53,7 @@ const rawQuestions = [
     "question": "Which essential condiment is also known as Japanese horseradish?",
     "answers": [
       {
-        "text": "Wasabi ",
+        "text": "Wasabi",
         "correct": true
       },
       {
@@ -695,7 +695,7 @@ const rawQuestions = [
         "correct": false
       },
       {
-        "text": "Bob&#039;s Burgers",
+        "text": "Bob's Burgers",
         "correct": false
       }
     ]
@@ -838,7 +838,7 @@ const rawQuestions = [
         "correct": false
       },
       {
-        "text": "Tekken ",
+        "text": "Tekken",
         "correct": false
       },
       {
@@ -981,7 +981,7 @@ const rawQuestions = [
         "correct": true
       },
       {
-        "text": "Ramsay&#039;s Kitchen Nightmares",
+        "text": "Ramsay's Kitchen Nightmares",
         "correct": false
       },
       {
@@ -1859,19 +1859,19 @@ const rawQuestions = [
     "question": "In any programming language, what is the most common way to iterate through an array?",
     "answers": [
       {
-        "text": "&#039;For&#039; loops",
+        "text": "For loops",
         "correct": true
       },
       {
-        "text": "&#039;If&#039; Statements",
+        "text": "If Statements",
         "correct": false
       },
       {
-        "text": "&#039;Do-while&#039; loops",
+        "text": "Do-while loops",
         "correct": false
       },
       {
-        "text": "&#039;While&#039; loops",
+        "text": "While loops",
         "correct": false
       }
     ]
@@ -2271,27 +2271,6 @@ const rawQuestions = [
       },
       {
         "text": "100",
-        "correct": false
-      }
-    ]
-  },
-  {
-    "question": "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
-    "answers": [
-      {
-        "text": "&lt;marquee&gt;&lt;/marquee&gt;",
-        "correct": true
-      },
-      {
-        "text": "&lt;scroll&gt;&lt;/scroll&gt;",
-        "correct": false
-      },
-      {
-        "text": "&lt;move&gt;&lt;/move&gt;",
-        "correct": false
-      },
-      {
-        "text": "&lt;slide&gt;&lt;/slide&gt;",
         "correct": false
       }
     ]
