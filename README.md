@@ -387,6 +387,7 @@ For this project, I had to do lots of research. The Code Institute's Java Script
 - [Kyle](https://youtu.be/riDzcEQbX6k) as well as the [tutorial](https://youtu.be/zgHim4ZDpZY) of the awesome Ania Kubów have helped me to understand the concepts on how to build the JS part logic. Also [James Quick](https://youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) has an awesome playlist, where he showcases a trivia app. Watching this, was very helpful.
 - The book [Eloquent JavaScript](https://eloquentjavascript.net/index.html), which has been recommended to me by CodeInstitute's "Eventyret_mentor", was a very great resource to look up Java Script related questions.
 - w3school's [article](https://www.w3schools.com/csSref/func_linear-gradient.php) about gradient color designs, have helped me to understand how this works.
+- The code for the github corner link has been taken from [sweetalert](https://sweetalert2.github.io/#examples) and slightly modified
 
 
 ### Content
