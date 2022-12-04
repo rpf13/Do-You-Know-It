@@ -4,7 +4,8 @@ The important goal is to have fun and get challenged by the questions.
     
 Link to deployed site: [Do You Know It?](https://rpf13.github.io/Do-You-Know-It/)
 
-    todo: Am I responive pic
+![Am I Responsive](docs/testing/amiresponsive.png)
+
 ---
 
 ## Objectives
@@ -123,10 +124,101 @@ As a first step of this project, before any code has been written, I have create
 </details>
 
 ## Features
-    briefly explain the project
+This chapter will describe all features of each site. Generally speaking each site, each card is fully responsive and much care has been taken to show an optimal result on each device. Sicne it was developed with a mobile first approach and the oveall design is based on a nested flexbox construct, it is already responsive as such. However, for larger screens bigger than 600px width, the font sizes and padding, borders had to be adjusted.
 
-### Existing Features
-    list out all of your project's features, and make sure to include a screenshot of each!!
+### Main Game Site
+
+The main site welcomes the player with a colorful, minimal design - with a few navigation options. The main card contains the title, a motivational text and three navigation buttons.
+- How to play
+- Start Game
+- Feedback
+
+It also contains a nice looking "corner" on the top right, with the github symbol and a link behind, which opens the repository to this game in a new window.
+
+![Main Game Site](docs/testing/01_game_main.png)
+
+### How to Play Site
+
+This site, which is in fact a modal box - an overlay over the main site, explains how to play the quiz. It can be closed either via the embedded close button or via clicking with the mouse anywhere outside the modal box (the partial transparent, black part).
+
+![How to Play](docs/testing/02_howtoplay.png)
+
+### Feedback
+
+The Feedback Button on the main site will hide the main card and open the feedback card. The feedback card contains a cancel / close button on the top right (or on screen sizes smaller 600px, on the top left). It is important, that a user can always come back to the main site, without reloading the page, therefore the close button.
+A title and some informational text is written, followed by the feedback form itself. First Name, Last Name, Email Address and a free form Feedback text field are available. All fields of the feedback form are mandatory. The submit button will send the form and redirect the user to the separate confirmation page.
+The github repo "top right corner button" is also available on this site.
+
+![Feedback](docs/testing/03_feedback.png)
+
+### Confirmation Site
+
+The confirmation page is not directly accessible from the main site. Once a user has submitted the feedback form, the feedback site will open. It will tell the user, that his feedback has been received, and that the feedback is appreciated. It will also tell the user, that he will be automatically redirected back to the main page after a few seconds.
+The github repo "top right corner button" is also available on this site.
+
+
+![Confirmation](docs/testing/04_confirmation.png)
+
+### Quiz Site
+
+The main attraction is the quiz site. Once the user presses the "Start Game" button on the main site, that card will disappear and the Quiz card will appear.
+- The cancel button is always present, should a player decide to stop the quiz. It is important to not lock the player in the game and that he only has the option to refresh the browser to come back home
+- The github repo "top right corner button" is also available on this site.
+
+#### Quiz Start
+- It welcomes the player with the "Let's play..." message on the top
+- 20 randomly choosen questions will be choosen out of the questions pool. This amount will be displayed on the top center of the quiz, where the player can always see at which question out of how many he is right now.
+- The timer of 45 seconds will immediately begin to count down - displayed on the top left
+- The first randomly choosen question will immediately be shown as a large text in the center of the page
+- The related answer will also be displayed underneath the answer, as clickable buttons. The order of the answers per question are also random, meaning that the position is not always the same - make it more difficult for the player that he cannot just remember on which position the correct answer was the last time.
+
+![Quiz Start](docs/testing/05_quiz_start.png)
+
+#### Answer Selected (Correct)
+Once the player has selected an answer (which is the correct answer in this example), some more actions will happen:
+- First of all, the countdown timer will stop
+- The answer buttons will become "unclickable"
+- The answer buttons will immediately show the correct, incorrect answer and change their background color to either red or green
+- The counter for "Correct Ansers" will increase by one
+- The "Next Question" button will appear on the bottom of the card
+
+
+![Quiz Correct Answer](docs/testing/05_quiz_answer_correct_click.png)
+
+#### Answer Selected (Incorrect)
+If the player has chosen the incorrect answer, the quiz behaves not much differently from the previously described "correct answer". The only difference is, tha the counter for the "Incorrect Answers" will increase by one:
+
+![Quiz Incorrect Answer](docs/testing/05_quiz_answer_incorrect_click.png)
+
+#### Next Question
+The "Next Question" button will bring the player to the next question, where the quiz timer gets reset and start from scratch. The question counter on the top middle will increase and the status of the correct, incorrect answers will still be visible.
+
+![Next Question](docs/testing/05_quiz_next_question.png)
+
+#### Time Elapsed
+If the player was too slow to answer a question, the following will happen:
+- The main title will change to the text "Game Over - You are too slow"
+- The countdown timer will correctly display 0 seconds
+- The counters for the correct-, incorrect and question counter will be visible
+- The last question, on which the player has got stuck, is still visible
+- The answers are visible but not clickable
+- A "Restart" and a "End Game" button will appear
+- The "Restart" button will restart the game immediately and show the next question, all timers will be reset, everything looks like a freshly, new started game. 20 new, randomly chose questions will appear.
+- The "End Game" button will bring the player back to the main site
+
+![Game Over](docs/testing/05_quiz_gameover.png)
+
+#### All Questions Answered
+
+If the player has answered all questions, the following will happen:
+- The main title will change to a congratulations and motivatinal message
+- The timer will immediately stop
+- The total amount of correct-, incorrect-, total-, total answered questions will be visible
+- The last questiond will still be present
+- The answers to the last question will be visible, even though no longer clickable
+- The "Restart" and the "End Game" button will be present. Restarting the game will load 20 new, random questions. End Game will bring the player back to the main page.
+
+![End of Game](docs/testing/05_quiz_endofgame.png)
 
 ### Features Left to Implement
 The following features should be implemented in a next release. They will bring another challenge to the player but also for me to implement them.
