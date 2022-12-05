@@ -11,11 +11,7 @@
 /* Global variables to simplify code and future changes to these values */
 :root {
     --gradient-lr: linear-gradient(325deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%);
-    /* --gradient-lr: linear-gradient(325deg, #d03ff8 0%,#f78a25 50%,#fcc700 100%); */
-    /* --gradient-rl: linear-gradient(135deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
     --gradient-rl: linear-gradient(135deg, #d03ff8 0%,#f78a25 50%,#fcc700 100%);
-    /* --gradient-rl: linear-gradient(50deg, #fc7900 60%,#fcc700 100%); */
-    /* --gradient-lr-btm-left: linear-gradient(198deg, #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
     --font-marker: 'Permanent Marker', cursive;
     --shadow: 6px 4px 8px 0 rgba(0, 0, 0, 0.2);
     --btn-backgrnd: rgba(34, 39, 37, 0.6);
@@ -29,13 +25,7 @@
 /* Begin index.html main section w. flexbox to allign all content centered and apply overall margin */
 /* Add background gradient effect to main section*/
 .body-class {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; */
     background: var(--gradient-lr);
-    /* remove setting below and work with a hide class */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,7 +40,6 @@
 
 /* Overall generic container - valid for all cards */
 .overall-container {
-    /* max-width: 80%; */
     padding: 1rem;
     display: flex;
     flex-direction: column; 
@@ -68,8 +57,6 @@
     flex-direction: column;
     gap: 3px;
     justify-content: center;
-    /* width: 80%;
-    max-width: 100%; */
 }
 
 .game-title {
@@ -89,7 +76,6 @@
     margin: 0px 15px 15px 15px;
     border-radius: 10px;
     text-align: center;
-    /* flex: 1 1 45ch; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -112,12 +98,6 @@
     transform: var(--transform-std);
 }
 
-/* Begin Quiz Game Section */
-/* .quiz-container {
-    display: flex;
-    justify-content: center;
-} */
-
 /* Begin Quiz card section */
 .quiz-card {
     background: var(--gradient-rl);
@@ -128,13 +108,6 @@
     flex-direction: column;
     gap: 3px;
     justify-content: center;
-
-    /* position: absolute;
-    transform: translate(-50%, -50%);
-    top: 38%;
-    left: 50%;
-    width: 80%;
-    max-width: 900px; */
 }
 
 .quiz-heading h1  {
@@ -147,7 +120,6 @@
 
 /* Quiz cancel section with countdown timer and cancel button */
 .cancel-game {
-    /* text-align: right; */
     display: flex;
     justify-content: space-between;
 }
@@ -189,7 +161,6 @@
 
 /* Quiz control button section */
 .quiz-control {
-    /* text-align: center; */
     padding: 1rem 0 1rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -268,7 +239,6 @@
 .modal-list li {
     padding: .3rem 0;
     font-size: 1rem;
-    /* font-weight: 600; */
 }
 
 .modal-close-btn {
@@ -284,8 +254,6 @@
 
 /* Begin Feedback card section, which contains the feedback form */
 .feedback-card {
-    /* check margin especially on small screen sizes */
-    /* margin: 50px 15px 25px 15px; */
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;
@@ -323,7 +291,6 @@
 
 .feedback-text {
     text-align: justify;
-    /* padding: 1.5rem; */
 }
 
 /* Feedback form w. contact details & free text field */
@@ -439,7 +406,6 @@
 }
 
 /* Begin media query section */
-
 /* Media Query for screen sizes of 800px or larger */
 @media screen and (min-width: 800px) {
     .overall-wrapper {
