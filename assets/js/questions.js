@@ -5,7 +5,6 @@
 // answers itself are another array, which contain for each answer two
 // k,v pairs - one containing the answer and the other correct/wrong definition
 
-
 const rawQuestions = [
   {
     "question": "Which of the following created and directed the Katamari Damacy series?",

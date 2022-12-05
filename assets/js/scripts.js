@@ -39,7 +39,6 @@ startButton.addEventListener('click', startGame);
 restartButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currQuestIndex++;
-    // update here also the question count
     getNextQuestion();
 });
 endButton.addEventListener('click', goHome);
@@ -47,8 +46,7 @@ howToPlayBtn.addEventListener('click', displayModal);
 closeBtn.addEventListener('click', hideModal);
 feedbackBtn.addEventListener('click', goToForm);
 
-
-// Functions section
+// Functions section - each function described with great detail for reference, explanation and learning purposes
 
 /**
  * This function will add the countdown timer to the quiz. It will countdown from
@@ -100,8 +98,6 @@ function stopCountdown() {
  */
 
 function startGame() {
-    // start button moved to game card, no need to hide sicne game card gets hidden
-    // startButton.classList.add('hide');
     document.getElementById("quizHeading").innerText = "Let's play...";
     gameCard.classList.add('hide');
     restartButton.classList.add('hide');
@@ -125,13 +121,10 @@ function startGame() {
  */
 
 function getNextQuestion() {
-    // stopCountdown() not needed since countdown is set again a few lines below
     clearQuizContent();
     countDown();
     answButtonsElement.classList.remove('disable-buttons');
     displQuest(randQuestions[currQuestIndex]);
-    // remove console statement
-    console.log(currQuestIndex);
     counter.innerText = `${currQuestIndex + 1} / ${questions.length}`;
 }
 
@@ -151,7 +144,6 @@ function getNextQuestion() {
 
 function displQuest(randQuestOfArray) {
     questElement.innerText = randQuestOfArray.question;
-    // randQuestOfArray.answers.forEach(answer => {
     randQuestOfArray.answers.sort(() => Math.random() - 0.5)
     randQuestOfArray.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -297,8 +289,5 @@ function hideModal() {
 
 function goToForm() {
     gameCard.classList.add('hide');
-    // const contactForm = document.getElementById('form');
-    // contactForm.classList.remove('hide');
     document.getElementById('form').classList.remove('hide');
 }
-
