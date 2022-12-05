@@ -88,17 +88,27 @@ If there are multiple steps possible per section, only one snapshot will be prov
 - iPad
 
 <details>
-<summary>iPad Pro 11" iOS 16.1 tested with Firefox Safari</summary>
+<summary>iPad Pro 11" iOS 16.1 tested with Chrome for iPad OS</summary>
 
 - Main Game Site
 
+    ![Main Game](docs/testing/ipad1.png)
+
 - How to Play Button to modal w. explanation where as click on close or outside the modal closes the modal box.
+
+    ![How to Play Modal](docs/testing/ipad2.png)
 
 - Feedback card filling in form
     - missing one of the mandatory fields & getting an error
     - klick on cancel button to leave
     - filling out complete form and submit
     - confirmation site w. redirect back to main site after a few seconds
+
+    ![Feedback missing](docs/testing/ipad3.png)
+
+    ![Feedback correct](docs/testing/ipad4.png)
+
+    ![Confirmation Site](docs/testing/ipad5.png)
 
 - Main quiz functionality (Start Game button)
     - Question & Answers get displayed
@@ -111,6 +121,16 @@ If there are multiple steps possible per section, only one snapshot will be prov
     - Replay button starts a new game, all counters reset
     - End Game button brings the user back to main site
     - Finishing quiz shows end of quiz message, statistics as well as Restart and End Game button
+
+    ![Quiz Start](docs/testing/ipad6.png)
+
+    ![Quiz First Question & Answers](docs/testing/ipad7.png)
+
+    ![Quiz Next Question](docs/testing/ipad8.png)
+
+    ![Quiz Game Over](docs/testing/ipad9.png)
+
+    ![Quiz Final](docs/testing/ipad10.png)
 
 </details>
 
