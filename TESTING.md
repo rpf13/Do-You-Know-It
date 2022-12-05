@@ -7,6 +7,36 @@ This site conains all testing, executed for this project.
 ---
 ## User Stories Testing
 
+- As a visiting user, I would like to be immediately attracted by a beautiful, colorful and minimalistic site
+
+    ![Game Main Site](docs/testing/01_game_main.png)
+
+- As a visiting user, I can find an explanation on how to play the quiz
+
+    ![How To Play](docs/testing/02_howtoplay.png)
+
+- As a visiting user, I would like to have an immediate overview of the site and how the quiz works
+    -> Fullfilled via the simple and self-explanatory interface
+- As a visiting user, I can see the status of the running quiz, how many questions are left, how many correct and wrong answers
+    -> Fullfilled via the quiz status bar, showing correct-, incorrect questions amount as well as at which, out of how many questions, the player is currently at.
+- As a visiting user, I always have the chance to abort the game and go back to the main site
+    -> Fullfilled via the Cancel button on the top right of the quiz card.
+
+    ![Quiz Start](docs/testing/05_quiz_start.png)
+
+- As a visiting user, I can fill out a contact form to give feedback
+
+    ![Feedback Form](docs/testing/03_feedback.png)
+
+- As a visiting user, I can visit the github repo via dedicated link / button
+    -> Github repo "top right corner button" available on each site, on every card displayed.
+
+    ![Github Site Link](docs/testing/04_confirmation.png)
+
+- As a visiting user, I will get an end of game text, once I have finished all questions. From there I can replay the game or go back to the main site.
+
+    ![End of Game](docs/testing/05_quiz_endofgame.png)
+
 
 ---
 ## Code Validation
