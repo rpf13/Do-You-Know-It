@@ -147,6 +147,10 @@
     padding: 1rem 0 1rem 0;
 }
 
+.scores {
+    font-weight: 600;
+}
+
 /* Question and answers section inside quiz card */
 .quiz-question {
     text-align: center;
