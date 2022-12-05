@@ -385,7 +385,7 @@ const rawQuestions = [
     ]
   },
   {
-    "question": "Which member of &quot;The Beatles&quot; narrated episodes of &quot;Thomas the Tank Engine&quot;?",
+    "question": "Which member of The Beatles narrated episodes of Thomas the Tank Engine?",
     "answers": [
       {
         "text": "Ringo Starr",
@@ -742,7 +742,7 @@ const rawQuestions = [
     ]
   },
   {
-    "question": "Excluding their instructor, how many members of Class VII are there in the game &quot;Legend of Heroes: Trails of Cold Steel&quot;?",
+    "question": "Excluding their instructor, how many members of Class VII are there in the game Legend of Heroes: Trails of Cold Stee?",
     "answers": [
       {
         "text": "9",
@@ -1505,7 +1505,7 @@ const rawQuestions = [
         "correct": true
       },
       {
-        "text": "St James&#039;s Palace",
+        "text": "St James's Palace",
         "correct": false
       },
       {
@@ -1750,7 +1750,7 @@ const rawQuestions = [
     ]
   },
   {
-    "question": "The son of which pope supposedly held a lecherous f&ecirc;te involving 50 courtesans in the papal palace?",
+    "question": "The son of which pope supposedly held a lecherous fete involving 50 courtesans in the papal palace?",
     "answers": [
       {
         "text": "Alexander VI",
