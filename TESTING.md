@@ -47,6 +47,14 @@ This site conains all testing, executed for this project.
 ### CSS Validator
 
 ### Java Script Validator
+The JavaScript code has been tested with the [jshint](https://jshint.com/) JavaScript tester. Both JS files have been checked, the main scripts.js file as well as the questions.js file. No significant / problematic errors have been reported.
+
+- jshint for scripts.js file
+    ![jshint for scripts.js](docs/testing/jshint_main.png)
+
+- jshint for questions.js file
+    ![jshint for questions.js](docs/testing/jshint_questions.png)
+
 
 ### Performace Testing via Lighthouse
 
