@@ -50,6 +50,15 @@ This site conains all testing, executed for this project.
 
 ### Performace Testing via Lighthouse
 
+Performance Testing has been done via Lighthouse extension on the Chrome browser. I have testes for desktop and mobile and I am very happy with the result:
+
+- Desktop
+    ![Lighthouse Desktop](docs/testing/lighthouse_desktop.png)
+
+- Mobile
+
+    ![Lighthouse Mobile](docs/testing/lighthouse_mobile.png)
+
 ### Wave Webaim Validator
 
 ## Functional testing & Responsiveness
@@ -59,7 +68,7 @@ If there are multiple steps possible per section, only one snapshot will be prov
 - iPhone
 
 <details>
-<summary>iPhone 12 Pro tested with Safari</summary>
+<summary>iPhone 12 Pro iOS 16.1 tested with Safari</summary>
 
 - Main Game Site
 
