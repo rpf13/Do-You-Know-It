@@ -144,7 +144,7 @@ function getNextQuestion() {
 
 function displQuest(randQuestOfArray) {
     questElement.innerText = randQuestOfArray.question;
-    randQuestOfArray.answers.sort(() => Math.random() - 0.5)
+    randQuestOfArray.answers.sort(() => Math.random() - 0.5);
     randQuestOfArray.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
