@@ -49,13 +49,24 @@ Test run via the official [w3c html validator](https://validator.w3.org/#validat
 
     ![w3c html checker main site](docs/testing/html_checker_main.png)
 
-- Confirmation Site
+- Confirmation Site did not show any errors or warnings.
 
-    to be done
-
-
+    ![Confirmation Site](docs/testing/html_checker_confirmation.png)
 
 ### CSS Validator
+
+Test run via the official [w3c css validator](https://jigsaw.w3.org/css-validator/)
+
+- Main site did not show any errors
+
+    ![w3c css checker main site](docs/testing/css_checker_main.png)
+
+- Confirmation site did not show any errors
+
+    ![w3c css checker confirmation site](docs/testing/css_checker_confirmation.png)
+
+
+- Confirmation Site
 
 ### Java Script Validator
 The JavaScript code has been tested with the [jshint](https://jshint.com/) JavaScript tester. Both JS files have been checked, the main scripts.js file as well as the questions.js file. No significant / problematic errors have been reported.
