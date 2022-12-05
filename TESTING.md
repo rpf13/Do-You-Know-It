@@ -80,13 +80,23 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
 - Main Game Site
 
+    ![Main Game](docs/testing/iphone1.png)
+
 - How to Play Button to modal w. explanation where as click on close or outside the modal closes the modal box.
+
+    ![How to Play Modal](docs/testing/iphone2.png)
 
 - Feedback card filling in form
     - missing one of the mandatory fields & getting an error
     - klick on cancel button to leave
     - filling out complete form and submit
     - confirmation site w. redirect back to main site after a few seconds
+
+    ![Feedback missing](docs/testing/iphone3.png)
+
+    ![Feedback correct](docs/testing/iphone4.png)
+
+    ![Confirmation Site](docs/testing/iphone5.png)
 
 - Main quiz functionality (Start Game button)
     - Question & Answers get displayed
@@ -99,6 +109,16 @@ If there are multiple steps possible per section, only one snapshot will be prov
     - Replay button starts a new game, all counters reset
     - End Game button brings the user back to main site
     - Finishing quiz shows end of quiz message, statistics as well as Restart and End Game button
+
+    ![Quiz Start](docs/testing/iphone6.png)
+
+    ![Quiz First Question & Answers](docs/testing/iphone7.png)
+
+    ![Quiz Next Question](docs/testing/iphone8.png)
+
+    ![Quiz Game Over](docs/testing/iphone9.png)
+
+    ![Quiz Final](docs/testing/iphone10.png)
 
 </details>
 
