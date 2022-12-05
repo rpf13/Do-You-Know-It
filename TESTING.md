@@ -65,9 +65,6 @@ Test run via the official [w3c css validator](https://jigsaw.w3.org/css-validato
 
     ![w3c css checker confirmation site](docs/testing/css_checker_confirmation.png)
 
-
-- Confirmation Site
-
 ### Java Script Validator
 The JavaScript code has been tested with the [jshint](https://jshint.com/) JavaScript tester. Both JS files have been checked, the main scripts.js file as well as the questions.js file. No significant / problematic errors have been reported.
 
@@ -76,7 +73,6 @@ The JavaScript code has been tested with the [jshint](https://jshint.com/) JavaS
 
 - jshint for questions.js file
     ![jshint for questions.js](docs/testing/jshint_questions.png)
-
 
 ### Performace Testing via Lighthouse
 Performance Testing has been done via Lighthouse extension on the Chrome browser. I have testes for desktop and mobile and I am very happy with the result:
@@ -89,7 +85,14 @@ Performance Testing has been done via Lighthouse extension on the Chrome browser
     ![Lighthouse Mobile](docs/testing/lighthouse_mobile.png)
 
 ### Wave Webaim Validator
-    to be done
+I did run the [Wave Webaim Validator](https://wave.webaim.org/) validator on both sites. 
+
+- Main site did not show any critical error
+    ![Wave Webaim Main Site](docs/testing/wave_webaim_checker_main.png)
+
+- Confirmation site did not show any critical errors except the automatic redirect back to the main site, of the confirmation page. Since this behavior is mentioned in the text displayed, when the user accesses this site, I don't consider it as a critical error.
+
+    ![Wave Webaim Confirmation Site](docs/testing/wave_webaim_checker_confirmation.png)
 
 ## Functional testing & Responsiveness
 The functional and responsiveness testing will be shown in a combined manner. All functions of the site will be tested with each device stated below, showing that responsiveness is granted and proper functionality is documented with each device type.
