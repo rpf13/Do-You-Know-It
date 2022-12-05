@@ -40,9 +40,20 @@ This site conains all testing, executed for this project.
 
 ---
 ## Code Validation
-    you must showcase proof with screenshots that you've validated any code files, such as HTML, CSS, JS, Python (where applicable)
+Great care has been taken for the code validation testing. A wide range of test's have been executed, as shown in the next chapters.
 
 ### HTML Validator
+Test run via the official [w3c html validator](https://validator.w3.org/#validate_by_uri)
+
+- Main Site did not show any errors, after fixing the [mentioned](#fixed-bugs) point. The other two warnings shown on this snapshot are not considered to be an issue because in my Layout, they really server as H1 headings.
+
+    ![w3c html checker main site](docs/testing/html_checker_main.png)
+
+- Confirmation Site
+
+    to be done
+
+
 
 ### CSS Validator
 
@@ -57,7 +68,6 @@ The JavaScript code has been tested with the [jshint](https://jshint.com/) JavaS
 
 
 ### Performace Testing via Lighthouse
-
 Performance Testing has been done via Lighthouse extension on the Chrome browser. I have testes for desktop and mobile and I am very happy with the result:
 
 - Desktop
@@ -68,6 +78,7 @@ Performance Testing has been done via Lighthouse extension on the Chrome browser
     ![Lighthouse Mobile](docs/testing/lighthouse_mobile.png)
 
 ### Wave Webaim Validator
+    to be done
 
 ## Functional testing & Responsiveness
 The functional and responsiveness testing will be shown in a combined manner. All functions of the site will be tested with each device stated below, showing that responsiveness is granted and proper functionality is documented with each device type.
@@ -225,5 +236,15 @@ If there are multiple steps possible per section, only one snapshot will be prov
     you must showcase proof with screenshots that you've tested the finished project on various browsers, such as Chrome, Firefox, Edge, Safari, Brave, etc.
     -> Add table with all browsers, tested
 
-## Unfixed Bugs
+## Bugs
+
+### Fixed Bugs
+
+- **How To Modal Box:**  By accident I have used the p tag instead of the a tag for the close button. After changing the tag, the error was fixed. The other two warnings shown on this snapshot are not considered to be an issue because in my Layout, they really server as H1 headings.
+
+    ![Modal warning](docs/testing/html_checker_modal_bug.png)
+
+
+
+### Unfixed Bugs
     list out any unfinished bugs you might have, where applicable... if none, don't just put "I have no bugs"... put something like: "There are no remaining bugs that I am aware of."
