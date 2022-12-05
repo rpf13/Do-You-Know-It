@@ -274,7 +274,7 @@ const rawQuestions = [
         "correct": false
       },
       {
-        "text": "The Velvet Underground &amp; Nico",
+        "text": "The Velvet Underground & Nico",
         "correct": false
       }
     ]
