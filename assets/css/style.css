@@ -147,6 +147,10 @@
     padding: 1rem 0 1rem 0;
 }
 
+.score-area p {
+    font-size: 0.9rem;
+}
+
 .scores {
     font-weight: 600;
 }
@@ -460,6 +464,10 @@
 
     .cancel-game i {
         font-size: 1.5rem;
+    }
+
+    .score-area p {
+        font-size: 1rem;
     }
 
     .quiz-question {
