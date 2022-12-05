@@ -247,9 +247,23 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
 ---
 ## Browser Compatibility
-    you must showcase proof with screenshots that you've tested the finished project on various browsers, such as Chrome, Firefox, Edge, Safari, Brave, etc.
-    -> Add table with all browsers, tested
+In addition to the various browsers used on the many different devices, mentioned in all the tests, I have made additional tests on many more devices. The following table will give an overview of all combinations, where the site has been tested. Most test's have been done by me, but due to the fact, that I do not own all sorts of devices, some tests have been executed by family and colleagues on my dayjob.
 
+For all the devices and browsers, the same kind of functional testing has been done as shown in the chapter [Functional and Responsiveness Testing](#functional-testing--responsiveness)
+
+
+|                             | Chrome | Firefox | Safari | Edge |
+|-----------------------------|:------:|:-------:|:------:|:----:|
+| OS X 12.6.1 MacBook Pro 16" |  PASS  |   PASS  |  PASS  | N.A. |
+| iOS 16.1.1 iPhone 12 Pro    |  PASS  |   PASS  |  PASS  | N.A. |
+| iPadOS 16.1.1 iPad Pro 11"  |  PASS  |   PASS  |  PASS  | N.A. |
+| Windows 10 Pro 21H1         |  PASS  |   PASS  |  N.A.  | PASS |
+| Android 11 Sony Xperia 5    |  PASS  |   N.A.  |  N.A.  | N.A. |
+| Android 13 OnePlus          |  PASS  |   N.A.  |  N.A.  | N.A. |
+| Linux Ubuntu 20.04LTS       |  N.A.  |   PASS  |  N.A.  | N.A. |
+
+
+---
 ## Bugs
 
 ### Fixed Bugs
@@ -258,7 +272,8 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
     ![Modal warning](docs/testing/html_checker_modal_bug.png)
 
-
-
 ### Unfixed Bugs
-    list out any unfinished bugs you might have, where applicable... if none, don't just put "I have no bugs"... put something like: "There are no remaining bugs that I am aware of."
+My personal, very extensive testing and the one of my family and working colleagues did not show any bugs left, at least not to my knowledge.
+
+---
+
