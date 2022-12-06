@@ -262,6 +262,7 @@
 
 /* Begin Feedback card section, which contains the feedback form */
 .feedback-card {
+    z-index: 1;
     background: var(--gradient-rl);
     box-shadow: var(--shadow);
     border-radius: 10px;

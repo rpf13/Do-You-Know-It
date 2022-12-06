@@ -26,8 +26,6 @@ const feedbackBtn = document.getElementById('feedbackBtn');
 // define Variables, which are going to be changed in the functions
 
 let randQuestions, currQuestIndex;
-// let correctAnswers = 0;
-// let incorrectAnswers = 0;
 let counter = document.getElementById("counter");
 let quizTimer = document.getElementById('quizTimer');
 let time = 45;
