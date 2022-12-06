@@ -295,7 +295,7 @@ The Java Script code also contains a lot of quite detailed explanation for each 
 
 ### Ruby Script to fetch the questions via API
 
-The questions for the quiz are stored on a local file called questions.js. I did not "invent" the questions myself, they are taken from the [https://opentdb.com/], via a generated API request URL on their page. The source format, when fetching the api is different than the format, I have used in the quiz. I did definitely not want to re-format them by hand and since due to my dayjob, I have some (beginner) knowledge in Ruby, I have chosen Ruby to fetch the API and reformat the output, save the result in a file on my development machine. 
+The questions for the quiz are stored on a local file called questions.js. I did not "invent" the questions myself, they are taken from the [opentdb](https://opentdb.com/), via a generated API request URL on their page. The source format, when fetching the api is different than the format, I have used in the quiz. I did definitely not want to re-format them by hand and since due to my dayjob, I have some (beginner) knowledge in Ruby, I have chosen Ruby to fetch the API and reformat the output, save the result in a file on my development machine. 
 
 -> It is totally clear to me, that I have to "translate" this script to Java Script, since the whole procedure is very well possible with Java Script, but given the time available for this project, I did choose to use Ruby first, and do the JS script later.
 
@@ -438,7 +438,7 @@ I have decided to use conventional commits, as described this [cheatsheet](https
 ---
 
 ## Testing
-Testing is covered in a separate page, view [testing.md](TESTING.md)
+Testing is covered in a separate page, view [TESTING.md](TESTING.md)
 
 ## Deployment
 
@@ -458,7 +458,7 @@ git clone git@github.com:rpf13/Do-You-Know-It.git
 ```
 
 If you are using your IDE inside Gitpod or generally prefer to work with Gitpod instead of a local IDE, you can open
-this project directly in Gitpod and and create your own workspace with it. To do so, klick on the following link:
+this project directly in Gitpod and and create your own workspace with it. To do so, click on the following link:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rpf13/Do-You-Know-It)
 

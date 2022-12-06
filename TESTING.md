@@ -113,7 +113,7 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
 - Feedback card filling in form
     - missing one of the mandatory fields & getting an error
-    - klick on cancel button to leave
+    - click on cancel button to leave
     - filling out complete form and submit
     - confirmation site w. redirect back to main site after a few seconds
 
@@ -162,7 +162,7 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
 - Feedback card filling in form
     - missing one of the mandatory fields & getting an error
-    - klick on cancel button to leave
+    - click on cancel button to leave
     - filling out complete form and submit
     - confirmation site w. redirect back to main site after a few seconds
 
@@ -211,7 +211,7 @@ If there are multiple steps possible per section, only one snapshot will be prov
 
 - Feedback card filling in form
     - missing one of the mandatory fields & getting an error
-    - klick on cancel button to leave
+    - click on cancel button to leave
     - filling out complete form and submit
     - confirmation site w. redirect back to main site after a few seconds
 
