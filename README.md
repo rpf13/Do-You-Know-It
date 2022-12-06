@@ -222,7 +222,7 @@ If the player has answered all questions, the following will happen:
 
 ### Features Left to Implement
 The following features should be implemented in a next release. They will bring another challenge to the player but also for me to implement them.
-- Implement an API call the opentdb to dynamically fetch questions - built in directly to the quiz.
+- Implement an API call the [opentdb](https://opentdb.com/) to dynamically fetch questions - built in directly to the quiz.
 - Give the player the option to choose the amount of questions, the different question topics as well as the level of difficulty
 - Implement a leaderboard BUT only if it is persistent and stored in a databease.
 
@@ -302,7 +302,7 @@ The questions for the quiz are stored on a local file called questions.js. I did
 <details>
 <summary>Ruby Script to generate the correct quiz question data format</summary>
 
-```
+```ruby
 
 # This little ruby script will execute a get request on the Open Trivia DB opentdb.com and
 # convert the response in the data format, which is needed to feed the quiz question file.
