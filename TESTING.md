@@ -268,7 +268,7 @@ For all the devices and browsers, the same kind of functional testing has been d
 
 ### Fixed Bugs
 
-- **How To Modal Box:**  By accident I have used the p tag instead of the a tag for the close button. After changing the tag, the error was fixed. The other two warnings shown on this snapshot are not considered to be an issue because in my Layout, they really server as H1 headings.
+- **How To Modal Box:**  By accident I have used the p tag instead of the a tag for the close button. After changing the tag, the error was fixed. The other two warnings shown on this snapshot are telling the error I did with having more than one h1 heading per site, which is a semantic error. I did correct them to h2 heading, leaving only one h1.
 
     ![Modal warning](docs/testing/html_checker_modal_bug.png)
 
