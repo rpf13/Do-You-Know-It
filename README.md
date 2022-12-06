@@ -225,6 +225,7 @@ The following features should be implemented in a next release. They will bring 
 - Implement an API call the [opentdb](https://opentdb.com/) to dynamically fetch questions - built in directly to the quiz.
 - Give the player the option to choose the amount of questions, the different question topics as well as the level of difficulty
 - Implement a leaderboard BUT only if it is persistent and stored in a databease.
+- The javascript code could be optimised that an experinced user is no longer able to cheat and impact the overall results. Therfore the answer correct dataset should not be allocated in a "visible" way. Example from the function displQuest `button.dataset.correct = answer.correct`
 
 ---
 
@@ -235,6 +236,9 @@ I used the following technologies and resources to create this site:
     - HTML5 has been used to build the structure of the site
 - [CSS3](https://www.w3.org/standards/webdesign/htmlcss)
     - CSS3 has been used for the styling of the site
+    - CSS root variables have been used in order to make it easier to maintain and adjust the code
+    - CSS flexbox has been widely used to create a responsive layout
+    - CSS grid has been used to create a responsive but also easy to maintain layout for the questions section
 - [Balsamiq](https://balsamiq.com)
     - Balsamiq has been used to create the Wireframes
 - [Google Fonts](https://fonts.google.com)

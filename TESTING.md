@@ -275,5 +275,8 @@ For all the devices and browsers, the same kind of functional testing has been d
 ### Unfixed Bugs
 My personal, very extensive testing and the one of my family and working colleagues did not show any bugs left, at least not to my knowledge.
 
+### Known Issues
+On very small screen sizes, smaller than 200px, the content starts to overflow. This is known, but I did not consider this small screen size as realistic to play the quiz. I mean, it would not be fun to play the quiz for example on a Smartwatch. Therefore I do not consider this as a problem.
+
 ---
 
