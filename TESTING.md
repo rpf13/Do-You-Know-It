@@ -90,7 +90,7 @@ I did run the [Wave Webaim Validator](https://wave.webaim.org/) validator on bot
 - Main site did not show any critical error
     ![Wave Webaim Main Site](docs/testing/wave_webaim_checker_main.png)
 
-- Confirmation site did not show any critical errors except the automatic redirect back to the main site, of the confirmation page. Since this behavior is mentioned in the text displayed, when the user accesses this site, I don't consider it as a critical error.
+- Confirmation site did not show any critical errors except the automatic redirect back to the main site, of the confirmation page. Since this behavior is mentioned in the text displayed, when the user accesses this site, I don't consider it as a critical error. Furthermore, the user has the option to click on the link embedded in the text, in order to get immediately redirected back home.
 
     ![Wave Webaim Confirmation Site](docs/testing/wave_webaim_checker_confirmation.png)
 

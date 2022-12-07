@@ -153,7 +153,7 @@ The github repo "top right corner button" is also available on this site.
 
 ### Confirmation Site
 
-The confirmation page is not directly accessible from the main site. Once a user has submitted the feedback form, the feedback site will open. It will tell the user, that his feedback has been received, and that the feedback is appreciated. It will also tell the user, that he will be automatically redirected back to the main page after a few seconds.
+The confirmation page is not directly accessible from the main site. Once a user has submitted the feedback form, the feedback site will open. It will tell the user, that his feedback has been received, and that the feedback is appreciated. It will tell the user, that he will be automatically redirected back to the main page after a few seconds, where as there is also the option to click on the link to get immediately redirected back home.
 The github repo "top right corner button" is also available on this site.
 
 
@@ -226,6 +226,7 @@ The following features should be implemented in a next release. They will bring 
 - Give the player the option to choose the amount of questions, the different question topics as well as the level of difficulty
 - Implement a leaderboard BUT only if it is persistent and stored in a databease.
 - The javascript code could be optimised that an experinced user is no longer able to cheat and impact the overall results. Therfore the answer correct dataset should not be allocated in a "visible" way. Example from the function displQuest `button.dataset.correct = answer.correct`
+- Implement a nice looking confetti rain effect, once a player has answered all questions and has achieved a score of 80% or more. 
 
 ---
 
@@ -239,6 +240,10 @@ I used the following technologies and resources to create this site:
     - CSS root variables have been used in order to make it easier to maintain and adjust the code
     - CSS flexbox has been widely used to create a responsive layout
     - CSS grid has been used to create a responsive but also easy to maintain layout for the questions section
+- [JavaScript](https://www.javascript.com/)
+    - JavaScript has been used for dynamic content
+- [Ruby](https://www.ruby-lang.org/en/)
+    - Ruby has been used to create a script for fetching the opentdb
 - [Balsamiq](https://balsamiq.com)
     - Balsamiq has been used to create the Wireframes
 - [Google Fonts](https://fonts.google.com)
