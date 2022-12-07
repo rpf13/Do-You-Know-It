@@ -84,11 +84,6 @@ Performance Testing has been done via Lighthouse extension on the Chrome browser
 
     ![Lighthouse Mobile](docs/testing/lighthouse_mobile.png)
 
-However, there is a catch. I did the Lighthouse testing before I have executed the W3C HTML validator. As documented under [Fixed Bugs](#fixed-bugs), when executing the HTML validator, I got the error that for the close button, which I have on the modal for the "How to Play" section, I did use the "wrong" html tag. I did use a p tag instead of an a tag and therefore the html validator gave me the warning.
-Once I did change this to the apparently correct a tag, the Lighthouse SEO report did no longer show 100%, I got a warning because of this, since there is no href provided within this a tag. The reason for this is, that I provide the functionality of closing the modal - hence also this button - via JavaScript. So it seems to be a "chicken and egg" problem, either I pass the html validation or the get 100% on the SEO of the lighthouse test.
-
-![Lighthouse SEO Warning](docs/testing/lighthouse_desktop_seo.png)
-
 ### Wave Webaim Validator
 I did run the [Wave Webaim Validator](https://wave.webaim.org/) validator on both sites. 
 
